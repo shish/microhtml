@@ -1,0 +1,26 @@
+language: php
+php:
+  - 7.0
+  - 7.1
+
+sudo: false
+
+cache:
+  directories:
+    - vendor
+    - $HOME/.composer/cache
+
+before_install:
+  - travis_retry composer self-update && composer --version #travis is bad at updating composer
+  - if [ -n "$GH_TOKEN" ]; then composer config github-oauth.github.com ${GH_TOKEN}; fi;
+
+install:
+  - composer install
+
+script:
+  - vendor/bin/phpunit test_*.php
+
+after_script:
+  - wget https://scrutinizer-ci.com/ocular.phar
+  - php ocular.phar code-coverage:upload --format=php-clover data/coverage.clover
+
