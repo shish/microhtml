@@ -5,7 +5,7 @@ namespace MicroHTML;
 class HTMLElement {
 	protected $tag = null;
 	protected $attrs = array();
-	protected $children = array()
+	protected $children = array();
 
 	public function __construct(string $tag, array $args) {
 		$this->tag = $tag;

@@ -18,9 +18,9 @@ install:
   - composer install
 
 script:
-  - vendor/bin/phpunit test_*.php
+  - vendor/bin/phpunit --coverage-clover coverage.clover --whitelist microhtml.php test_*.php
 
 after_script:
   - wget https://scrutinizer-ci.com/ocular.phar
-  - php ocular.phar code-coverage:upload --format=php-clover data/coverage.clover
+  - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
 
