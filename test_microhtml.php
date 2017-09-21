@@ -8,7 +8,7 @@ class HTMLElementTestCase extends \PHPUnit\Framework\TestCase {
 	/*
 	 * basic
 	 */
-	function testBasic() {
+	public function testBasic() {
 		$this->assertEquals(
 			"<p></p>",
 			P()
@@ -18,28 +18,28 @@ class HTMLElementTestCase extends \PHPUnit\Framework\TestCase {
 	/*
 	 * attributes
 	 */
-	function testAttr() {
+	public function testAttr() {
 		$this->assertEquals(
 			"<a href='hello.html'></a>",
 			A(["href"=>"hello.html"])
 		);
 	}
 
-	function testMultiAttr() {
+	public function testMultiAttr() {
 		$this->assertEquals(
 			"<a href='hello.html' target='_blank'></a>",
 			A(["href"=>"hello.html", "target"=>"_blank"])
 		);
 	}
 
-	function testDangerAttr() {
+	public function testDangerAttr() {
 		$this->assertEquals(
 			"<a href='esc&#039; ape=&#039;foo'></a>",
 			A(["href"=>"esc' ape='foo"])
 		);
 	}
 
-	function testBoolAttr() {
+	public function testBoolAttr() {
 		$this->assertEquals(
 			"<input required />",
 			INPUT(["required"=>true])
@@ -49,14 +49,14 @@ class HTMLElementTestCase extends \PHPUnit\Framework\TestCase {
 	/*
 	 * child elements
 	 */
-	function testChild() {
+	public function testChild() {
 		$this->assertEquals(
 			"<p><a></a></p>",
 			P(A())
 		);
 	}
 
-	function testMultiChild() {
+	public function testMultiChild() {
 		$this->assertEquals(
 			"<p><a></a><div></div></p>",
 			P(A(), DIV())
@@ -66,21 +66,21 @@ class HTMLElementTestCase extends \PHPUnit\Framework\TestCase {
 	/*
 	 * text
 	 */
-	function testText() {
+	public function testText() {
 		$this->assertEquals(
 			"<p>hello</p>",
 			P("hello")
 		);
 	}
 
-	function testMutliText() {
+	public function testMutliText() {
 		$this->assertEquals(
 			"<p>helloworld</p>",
 			P("hello", "world")
 		);
 	}
 
-	function testDangerText() {
+	public function testDangerText() {
 		$this->assertEquals(
 			"<p>&lt;a href=&#039;nope.html&#039;&gt;yo&lt;/a&gt;</p>",
 			P("<a href='nope.html'>yo</a>")
@@ -90,7 +90,7 @@ class HTMLElementTestCase extends \PHPUnit\Framework\TestCase {
 	/*
 	 * functions
 	 */
-	function testAppendChild() {
+	public function testAppendChild() {
 		$el = P();
 		$el->appendChild("hello world");
 		$this->assertEquals(
@@ -102,21 +102,21 @@ class HTMLElementTestCase extends \PHPUnit\Framework\TestCase {
 	/*
 	 * subclasses
 	 */
-	function testSelfClosing() {
+	public function testSelfClosing() {
 		$this->assertEquals(
 			"<br />",
 			BR()
 		);
 	}
 
-	function testEmpty() {
+	public function testEmpty() {
 		$this->assertEquals(
 			"<br /><br />",
 			emptyHTML(BR(), BR())
 		);
 	}
 
-	function testRaw() {
+	public function testRaw() {
 		$this->assertEquals(
 			"<p><bacon></p>",
 			P(rawHTML("<bacon>"))

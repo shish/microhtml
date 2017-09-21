@@ -4,8 +4,10 @@ namespace MicroHTML;
 
 class HTMLElement {
 	protected $tag = null;
+	protected $attrs = array();
+	protected $children = array()
 
-	function __construct(string $tag, array $args) {
+	public function __construct(string $tag, array $args) {
 		$this->tag = $tag;
 
 		if(count($args) > 0 && is_array($args[0])) {
@@ -51,7 +53,7 @@ class HTMLElement {
 		return $sub;
 	}
 
-	function __toString() {
+	public function __toString() {
 		$tag = $this->tag;
 		$par = $this->renderAttrs();
 		$sub = $this->renderChildren();
@@ -60,7 +62,7 @@ class HTMLElement {
 }
 
 class SelfClosingHTMLElement extends HTMLElement {
-	function __toString() {
+	public function __toString() {
 		$tag = $this->tag;
 		$par = $this->renderAttrs();
 		return "<$tag$par />";
@@ -68,11 +70,11 @@ class SelfClosingHTMLElement extends HTMLElement {
 }
 
 class EmptyHTMLElement extends HTMLElement {
-	function __construct(array $args) {
-		HTMLElement::__construct("", $args);
+	public function __construct(array $args) {
+		parent::__construct("", $args);
 	}
 
-	function __toString() {
+	public function __toString() {
 		$sub = $this->renderChildren();
 		return "$sub";
 	}
@@ -81,12 +83,12 @@ class EmptyHTMLElement extends HTMLElement {
 class RawHTMLElement extends HTMLElement {
 	private $html;
 
-	function __construct(string $html) {
-		HTMLElement::__construct("", []);
+	public function __construct(string $html) {
+		parent::__construct("", []);
 		$this->html = $html;
 	}
 
-	function __toString() {
+	public function __toString() {
 		return $this->html;
 	}
 }
