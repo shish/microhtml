@@ -5,9 +5,6 @@ namespace MicroHTML;
 require_once "microhtml.php";
 
 class HTMLElementTestCase extends \PHPUnit\Framework\TestCase {
-	protected $backupGlobalsBlacklist = array('database', 'config');
-
-	# $this->assertEqualXMLStructure();
 	/*
 	 * basic
 	 */
