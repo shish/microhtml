@@ -1,20 +1,22 @@
 {
-	"type"    : "project",
-	"license" : "MIT",
-	"minimum-stability" : "dev",
-
-	"repositories" : [
-		{
-			"type": "composer",
-			"url": "https://asset-packagist.org"
-		}
-	],
-
-	"require" : {
-		"php" : ">=7.0"
-	},
-
-	"require-dev" : {
-		"phpunit/phpunit" : "6.*"
-	}
+    "name": "shish/microhtml",
+    "type": "library",
+    "description": "A minimal HTML generating library",
+    "keywords": ["generator", "html"],
+    "homepage": "https://github.com/shish/microhtml",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shish",
+            "email": "webmaster@shishnet.org",
+            "homepage": "http://shishnet.org",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "6.*"
+    }
 }
