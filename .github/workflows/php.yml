@@ -1,0 +1,35 @@
+name: Unit Tests
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    name: PHP ${{ matrix.php-versions }}
+    strategy:
+      max-parallel: 15
+      matrix:
+        php-versions: ['7.2', '7.3', '7.4']
+
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+
+    - name: Set up PHP
+      uses: shivammathur/setup-php@master
+      with:
+        php-version: ${{ matrix.php-versions }}
+        coverage: pcov
+        extension-csv: mbstring
+
+    - name: Check Versions
+      run: php -v && composer -V
+      
+    - name: Validate composer.json and composer.lock
+      run: composer validate
+
+    - name: Install dependencies
+      run: composer install --prefer-dist --no-progress --no-suggest
+
+    - name: Run test suite
+      run: vendor/bin/phpunit --bootstrap vendor/autoload.php --no-configuration ./tests
