@@ -1,8 +1,8 @@
 <?php
 
-namespace MicroHTML;
+require "vendor/autoload.php";
 
-require_once "microhtml.php";
+use function MicroHTML\{A,P,INPUT,BR,emptyHTML,DIV,rawHTML};
 
 class HTMLElementTestCase extends \PHPUnit\Framework\TestCase {
 	/*
