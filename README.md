@@ -6,6 +6,8 @@ Moving from Hack to vanilla PHP, I miss XHP T\_\_T
 This isn't XHP, but it does provide a minimum-bullshit method of generating HTML
 
 ```
+use function MicroHTML\{HTML,SECTION,H1,P,DIV};
+
 $page = HTML(
 	SECTION(["id"=>"news"],
 		H1("My title"),
