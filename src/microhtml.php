@@ -121,6 +121,8 @@ function H3(...$args) {return new HTMLElement("h3", $args);}
 
 function FORM(...$args) {return new HTMLElement("form", $args);}
 function LABEL(...$args) {return new HTMLElement("label", $args);}
+function SELECT(...$args) {return new HTMLElement("select", $args);}
+function OPTION(...$args) {return new HTMLElement("option", $args);}
 
 function INPUT(...$args) {return new SelfClosingHTMLElement("input", $args);}
 function BR(...$args) {return new SelfClosingHTMLElement("br", $args);}
