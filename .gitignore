@@ -2,3 +2,6 @@ vendor/
 .idea/
 *.phar
 *.clover
+
+# only apps need a lock, not libraries
+composer.lock
