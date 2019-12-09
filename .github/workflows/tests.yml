@@ -20,7 +20,7 @@ jobs:
       with:
         php-version: ${{ matrix.php-versions }}
         coverage: pcov
-        extension-csv: mbstring
+        extensions: mbstring
 
     - name: Check Versions
       run: php -v && composer -V
