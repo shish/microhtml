@@ -6,7 +6,6 @@ jobs:
   build:
     name: PHP ${{ matrix.php-versions }}
     strategy:
-      max-parallel: 15
       matrix:
         php-versions: ['7.2', '7.3', '7.4']
 
