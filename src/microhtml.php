@@ -32,6 +32,11 @@ class HTMLElement {
 			if($val === true) {
 				$par .= " $name";
 			}
+			elseif($val === false) {
+				// do nothing, so that boolean attributes can be
+				// set to false, which is often easier than deleting
+				// the key from the attributes dictionary
+			}
 			else {
 				$val = htmlentities($val, ENT_QUOTES, "UTF-8");
 				$par .= " $name='$val'";

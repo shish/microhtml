@@ -50,11 +50,19 @@ class HTMLElementTestCase extends \PHPUnit\Framework\TestCase
         );
     }
 
-    public function testBoolAttr()
+    public function testBoolAttrTrue()
     {
         $this->assertEquals(
             "<input required />",
             INPUT(["required"=>true])
+        );
+    }
+
+    public function testBoolAttrFalse()
+    {
+        $this->assertEquals(
+            "<input />",
+            INPUT(["required"=>false])
         );
     }
 
