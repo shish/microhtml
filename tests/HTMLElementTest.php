@@ -66,6 +66,22 @@ class HTMLElementTest extends \PHPUnit\Framework\TestCase
         );
     }
 
+    public function testNullAttr()
+    {
+        $this->assertEquals(
+            "<input />",
+            INPUT(["value"=>null])
+        );
+    }
+
+    public function testIntAttr()
+    {
+        $this->assertEquals(
+            "<input value='42' />",
+            INPUT(["value"=>42])
+        );
+    }
+
     /*
      * child elements
      */
