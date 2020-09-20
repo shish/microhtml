@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 require "vendor/autoload.php";
 
@@ -10,7 +10,7 @@ use function MicroHTML\emptyHTML;
 use function MicroHTML\DIV;
 use function MicroHTML\rawHTML;
 
-class HTMLElementTestCase extends \PHPUnit\Framework\TestCase
+class HTMLElementTest extends \PHPUnit\Framework\TestCase
 {
     /*
      * basic
@@ -153,22 +153,3 @@ class HTMLElementTestCase extends \PHPUnit\Framework\TestCase
     }
 }
 
-class CodeTestCase extends \PHPUnit\Framework\TestCase
-{
-    /**
-     * Check for typos - function name should match tag name
-     */
-    public function testSync()
-    {
-        $exceptions = [
-            "VAR_" => "var"
-        ];
-        foreach (file("src/microhtml.php") as $line) {
-            if (preg_match("/function ([A-Z][^(]*)/", $line, $matches)) {
-                $fun = $matches[1];
-                $tag = $exceptions[$fun] ?? strtolower($fun);
-                $this->assertStringContainsString("\"$tag\"", $line);
-            }
-        }
-    }
-}
