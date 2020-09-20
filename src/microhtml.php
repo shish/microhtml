@@ -53,6 +53,8 @@ class HTMLElement {
 				$sub .= $child;
 			}
 			else {
+				if(is_null($child)) $child = "";
+				if(is_numeric($child) || is_bool($child)) $child = (string)$child;
 				$sub .= htmlentities($child, ENT_QUOTES, "UTF-8");
 			}
 		}

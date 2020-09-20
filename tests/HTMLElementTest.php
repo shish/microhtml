@@ -128,6 +128,22 @@ class HTMLElementTest extends \PHPUnit\Framework\TestCase
         );
     }
 
+    public function testNullText()
+    {
+        $this->assertEquals(
+            "<p></p>",
+            P(null)
+        );
+    }
+
+    public function testIntText()
+    {
+        $this->assertEquals(
+            "<p>42</p>",
+            P(42)
+        );
+    }
+
     /*
      * functions
      */
