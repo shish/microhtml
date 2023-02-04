@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 require "vendor/autoload.php";
 
@@ -184,4 +186,3 @@ class HTMLElementTest extends \PHPUnit\Framework\TestCase
         );
     }
 }
-
