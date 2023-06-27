@@ -3,9 +3,11 @@ MicroHTML
 
 Moving from Hack to vanilla PHP, I miss XHP T\_\_T
 
-This isn't XHP, but it does provide a minimum-bullshit method of generating HTML
+This isn't XHP, but it does provide a minimum-bullshit method of generating HTML in a consistent and secure manner
 
-```
+```php
+<?php
+
 use function MicroHTML\{HTML,SECTION,H1,P,DIV};
 
 $page = HTML(
@@ -24,7 +26,7 @@ $page->appendChild(
 print($page);
 ```
 
-```
+```html
 <html>
 	<section id='news'>
 		<h1>My title</h1>
