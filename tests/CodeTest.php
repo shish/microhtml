@@ -7,12 +7,14 @@ class CodeTest extends \PHPUnit\Framework\TestCase
     /**
      * Check for typos - function name should match tag name
      */
-    public function testSync()
+    public function testSync(): void
     {
         $exceptions = [
             "VAR_" => "var"
         ];
-        foreach (file("src/microhtml.php") as $line) {
+		$lines = file("src/microhtml.php");
+		if(!$lines) $this->assertTrue($lines);
+        foreach ($lines as $line) {
             if (preg_match("/function ([A-Z][^(]*)/", $line, $matches)) {
                 $fun = $matches[1];
                 $tag = $exceptions[$fun] ?? strtolower($fun);

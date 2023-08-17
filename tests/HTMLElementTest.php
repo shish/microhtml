@@ -17,7 +17,7 @@ class HTMLElementTest extends \PHPUnit\Framework\TestCase
     /*
      * basic
      */
-    public function testBasic()
+    public function testBasic(): void
     {
         $this->assertEquals(
             "<p></p>",
@@ -28,7 +28,7 @@ class HTMLElementTest extends \PHPUnit\Framework\TestCase
     /*
      * attributes
      */
-    public function testAttr()
+    public function testAttr(): void
     {
         $this->assertEquals(
             "<a href='hello.html'></a>",
@@ -36,7 +36,7 @@ class HTMLElementTest extends \PHPUnit\Framework\TestCase
         );
     }
 
-    public function testMultiAttr()
+    public function testMultiAttr(): void
     {
         $this->assertEquals(
             "<a href='hello.html' target='_blank'></a>",
@@ -44,7 +44,7 @@ class HTMLElementTest extends \PHPUnit\Framework\TestCase
         );
     }
 
-    public function testDangerAttr()
+    public function testDangerAttr(): void
     {
         $this->assertEquals(
             "<a href='esc&#039; ape=&#039;foo'></a>",
@@ -52,7 +52,7 @@ class HTMLElementTest extends \PHPUnit\Framework\TestCase
         );
     }
 
-    public function testBoolAttrTrue()
+    public function testBoolAttrTrue(): void
     {
         $this->assertEquals(
             "<input required />",
@@ -60,7 +60,7 @@ class HTMLElementTest extends \PHPUnit\Framework\TestCase
         );
     }
 
-    public function testBoolAttrFalse()
+    public function testBoolAttrFalse(): void
     {
         $this->assertEquals(
             "<input />",
@@ -68,7 +68,7 @@ class HTMLElementTest extends \PHPUnit\Framework\TestCase
         );
     }
 
-    public function testNullAttr()
+    public function testNullAttr(): void
     {
         $this->assertEquals(
             "<input />",
@@ -76,7 +76,7 @@ class HTMLElementTest extends \PHPUnit\Framework\TestCase
         );
     }
 
-    public function testIntAttr()
+    public function testIntAttr(): void
     {
         $this->assertEquals(
             "<input value='42' />",
@@ -87,7 +87,7 @@ class HTMLElementTest extends \PHPUnit\Framework\TestCase
     /*
      * child elements
      */
-    public function testChild()
+    public function testChild(): void
     {
         $this->assertEquals(
             "<p><a></a></p>",
@@ -95,7 +95,7 @@ class HTMLElementTest extends \PHPUnit\Framework\TestCase
         );
     }
 
-    public function testMultiChild()
+    public function testMultiChild(): void
     {
         $this->assertEquals(
             "<p><a></a><div></div></p>",
@@ -106,7 +106,7 @@ class HTMLElementTest extends \PHPUnit\Framework\TestCase
     /*
      * text
      */
-    public function testText()
+    public function testText(): void
     {
         $this->assertEquals(
             "<p>hello</p>",
@@ -114,7 +114,7 @@ class HTMLElementTest extends \PHPUnit\Framework\TestCase
         );
     }
 
-    public function testMutliText()
+    public function testMutliText(): void
     {
         $this->assertEquals(
             "<p>helloworld</p>",
@@ -122,7 +122,7 @@ class HTMLElementTest extends \PHPUnit\Framework\TestCase
         );
     }
 
-    public function testDangerText()
+    public function testDangerText(): void
     {
         $this->assertEquals(
             "<p>&lt;a href=&#039;nope.html&#039;&gt;yo&lt;/a&gt;</p>",
@@ -130,7 +130,7 @@ class HTMLElementTest extends \PHPUnit\Framework\TestCase
         );
     }
 
-    public function testNullText()
+    public function testNullText(): void
     {
         $this->assertEquals(
             "<p></p>",
@@ -138,7 +138,7 @@ class HTMLElementTest extends \PHPUnit\Framework\TestCase
         );
     }
 
-    public function testIntText()
+    public function testIntText(): void
     {
         $this->assertEquals(
             "<p>42</p>",
@@ -149,7 +149,7 @@ class HTMLElementTest extends \PHPUnit\Framework\TestCase
     /*
      * functions
      */
-    public function testAppendChild()
+    public function testAppendChild(): void
     {
         $el = P();
         $el->appendChild("hello world");
@@ -162,7 +162,7 @@ class HTMLElementTest extends \PHPUnit\Framework\TestCase
     /*
      * subclasses
      */
-    public function testSelfClosing()
+    public function testSelfClosing(): void
     {
         $this->assertEquals(
             "<br />",
@@ -170,7 +170,7 @@ class HTMLElementTest extends \PHPUnit\Framework\TestCase
         );
     }
 
-    public function testEmpty()
+    public function testEmpty(): void
     {
         $this->assertEquals(
             "<br /><br />",
@@ -178,7 +178,7 @@ class HTMLElementTest extends \PHPUnit\Framework\TestCase
         );
     }
 
-    public function testRaw()
+    public function testRaw(): void
     {
         $this->assertEquals(
             "<p><bacon></p>",
