@@ -11,6 +11,7 @@ use function MicroHTML\BR;
 use function MicroHTML\emptyHTML;
 use function MicroHTML\DIV;
 use function MicroHTML\rawHTML;
+use function MicroHTML\joinHTML;
 
 class HTMLElementTest extends \PHPUnit\Framework\TestCase
 {
@@ -183,6 +184,18 @@ class HTMLElementTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals(
             "<p><bacon></p>",
             P(rawHTML("<bacon>"))
+        );
+    }
+
+    public function testJoin(): void
+    {
+        $this->assertEquals(
+            "<p>A</p>, <p>B</p>, C",
+            joinHTML(", ", [P("A"), P("B"), "C"])
+        );
+        $this->assertEquals(
+            "<p>A</p><br /><p>B</p><br />C",
+            joinHTML(BR(), [P("A"), P("B"), "C"])
         );
     }
 }

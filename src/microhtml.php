@@ -127,6 +127,18 @@ function emptyHTML(...$args): HTMLElement
 {
     return new EmptyHTMLElement($args);
 }
+function joinHTML(HTMLElement|string $glue, array $pieces): HTMLElement
+{
+    $out = emptyHTML();
+    $n = 0;
+    foreach ($pieces as $piece) {
+        if ($n++ > 0) {
+            $out->appendChild($glue);
+        }
+        $out->appendChild($piece);
+    }
+    return $out;
+}
 
 # https://developer.mozilla.org/en-US/docs/Web/HTML/Element
 function HTML(...$args): HTMLElement
