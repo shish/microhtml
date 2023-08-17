@@ -23,7 +23,7 @@ class HTMLElement
         }
     }
 
-    public function appendChild(...$args): void
+    public function appendChild(mixed ...$args): void
     {
         foreach ($args as $arg) {
             $this->children[] = $arg;
@@ -123,7 +123,7 @@ function rawHTML(string $html): HTMLElement
 {
     return new RawHTMLElement($html);
 }
-function emptyHTML(...$args): HTMLElement
+function emptyHTML(mixed ...$args): HTMLElement
 {
     return new EmptyHTMLElement($args);
 }
@@ -141,487 +141,487 @@ function joinHTML(HTMLElement|string $glue, array $pieces): HTMLElement
 }
 
 # https://developer.mozilla.org/en-US/docs/Web/HTML/Element
-function HTML(...$args): HTMLElement
+function HTML(mixed ...$args): HTMLElement
 {
     return new HTMLElement("html", $args);
 }
 
 # Document metadata
-function BASE(...$args): HTMLElement
+function BASE(mixed ...$args): HTMLElement
 {
     return new SelfClosingHTMLElement("base", $args);
 }
-function HEAD(...$args): HTMLElement
+function HEAD(mixed ...$args): HTMLElement
 {
     return new HTMLElement("head", $args);
 }
-function LINK(...$args): HTMLElement
+function LINK(mixed ...$args): HTMLElement
 {
     return new SelfClosingHTMLElement("link", $args);
 }
-function META(...$args): HTMLElement
+function META(mixed ...$args): HTMLElement
 {
     return new SelfClosingHTMLElement("meta", $args);
 }
-function STYLE(...$args): HTMLElement
+function STYLE(mixed ...$args): HTMLElement
 {
     return new HTMLElement("style", $args);
 }
-function TITLE(...$args): HTMLElement
+function TITLE(mixed ...$args): HTMLElement
 {
     return new HTMLElement("title", $args);
 }
 
 # Sectioning root
-function BODY(...$args): HTMLElement
+function BODY(mixed ...$args): HTMLElement
 {
     return new HTMLElement("body", $args);
 }
 
 # Content sectioning
-function ADDRESS(...$args): HTMLElement
+function ADDRESS(mixed ...$args): HTMLElement
 {
     return new HTMLElement("address", $args);
 }
-function ARTICLE(...$args): HTMLElement
+function ARTICLE(mixed ...$args): HTMLElement
 {
     return new HTMLElement("article", $args);
 }
-function ASIDE(...$args): HTMLElement
+function ASIDE(mixed ...$args): HTMLElement
 {
     return new HTMLElement("aside", $args);
 }
-function FOOTER(...$args): HTMLElement
+function FOOTER(mixed ...$args): HTMLElement
 {
     return new HTMLElement("footer", $args);
 }
-function HEADER(...$args): HTMLElement
+function HEADER(mixed ...$args): HTMLElement
 {
     return new HTMLElement("header", $args);
 }
-function H1(...$args): HTMLElement
+function H1(mixed ...$args): HTMLElement
 {
     return new HTMLElement("h1", $args);
 }
-function H2(...$args): HTMLElement
+function H2(mixed ...$args): HTMLElement
 {
     return new HTMLElement("h2", $args);
 }
-function H3(...$args): HTMLElement
+function H3(mixed ...$args): HTMLElement
 {
     return new HTMLElement("h3", $args);
 }
-function H4(...$args): HTMLElement
+function H4(mixed ...$args): HTMLElement
 {
     return new HTMLElement("h4", $args);
 }
-function H5(...$args): HTMLElement
+function H5(mixed ...$args): HTMLElement
 {
     return new HTMLElement("h5", $args);
 }
-function H6(...$args): HTMLElement
+function H6(mixed ...$args): HTMLElement
 {
     return new HTMLElement("h6", $args);
 }
-function HGROUP(...$args): HTMLElement
+function HGROUP(mixed ...$args): HTMLElement
 {
     return new HTMLElement("hgroup", $args);
 }
-function MAIN(...$args): HTMLElement
+function MAIN(mixed ...$args): HTMLElement
 {
     return new HTMLElement("main", $args);
 }
-function NAV(...$args): HTMLElement
+function NAV(mixed ...$args): HTMLElement
 {
     return new HTMLElement("nav", $args);
 }
-function SECTION(...$args): HTMLElement
+function SECTION(mixed ...$args): HTMLElement
 {
     return new HTMLElement("section", $args);
 }
 
 # Text content
-function BLOCKQUOTE(...$args): HTMLElement
+function BLOCKQUOTE(mixed ...$args): HTMLElement
 {
     return new HTMLElement("blockquote", $args);
 }
-function DD(...$args): HTMLElement
+function DD(mixed ...$args): HTMLElement
 {
     return new HTMLElement("dd", $args);
 }
-function DIR(...$args): HTMLElement
+function DIR(mixed ...$args): HTMLElement
 {
     return new HTMLElement("dir", $args);
 }
-function DIV(...$args): HTMLElement
+function DIV(mixed ...$args): HTMLElement
 {
     return new HTMLElement("div", $args);
 }
-function DL(...$args): HTMLElement
+function DL(mixed ...$args): HTMLElement
 {
     return new HTMLElement("dl", $args);
 }
-function DT(...$args): HTMLElement
+function DT(mixed ...$args): HTMLElement
 {
     return new HTMLElement("dt", $args);
 }
-function FIGCAPTION(...$args): HTMLElement
+function FIGCAPTION(mixed ...$args): HTMLElement
 {
     return new HTMLElement("figcaption", $args);
 }
-function FIGURE(...$args): HTMLElement
+function FIGURE(mixed ...$args): HTMLElement
 {
     return new HTMLElement("figure", $args);
 }
-function HR(...$args): HTMLElement
+function HR(mixed ...$args): HTMLElement
 {
     return new SelfClosingHTMLElement("hr", $args);
 }
-function LI(...$args): HTMLElement
+function LI(mixed ...$args): HTMLElement
 {
     return new HTMLElement("li", $args);
 }
-function OL(...$args): HTMLElement
+function OL(mixed ...$args): HTMLElement
 {
     return new HTMLElement("ol", $args);
 }
-function P(...$args): HTMLElement
+function P(mixed ...$args): HTMLElement
 {
     return new HTMLElement("p", $args);
 }
-function PRE(...$args): HTMLElement
+function PRE(mixed ...$args): HTMLElement
 {
     return new HTMLElement("pre", $args);
 }
-function UL(...$args): HTMLElement
+function UL(mixed ...$args): HTMLElement
 {
     return new HTMLElement("ul", $args);
 }
 
 # Inline text semantics
-function A(...$args): HTMLElement
+function A(mixed ...$args): HTMLElement
 {
     return new HTMLElement("a", $args);
 }
-function ABBR(...$args): HTMLElement
+function ABBR(mixed ...$args): HTMLElement
 {
     return new HTMLElement("abbr", $args);
 }
-function B(...$args): HTMLElement
+function B(mixed ...$args): HTMLElement
 {
     return new HTMLElement("b", $args);
 }
-function BDI(...$args): HTMLElement
+function BDI(mixed ...$args): HTMLElement
 {
     return new HTMLElement("bdi", $args);
 }
-function BDO(...$args): HTMLElement
+function BDO(mixed ...$args): HTMLElement
 {
     return new HTMLElement("bdo", $args);
 }
-function BR(...$args): HTMLElement
+function BR(mixed ...$args): HTMLElement
 {
     return new SelfClosingHTMLElement("br", $args);
 }
-function CITE(...$args): HTMLElement
+function CITE(mixed ...$args): HTMLElement
 {
     return new HTMLElement("cite", $args);
 }
-function CODE(...$args): HTMLElement
+function CODE(mixed ...$args): HTMLElement
 {
     return new HTMLElement("code", $args);
 }
-function DATA(...$args): HTMLElement
+function DATA(mixed ...$args): HTMLElement
 {
     return new HTMLElement("data", $args);
 }
-function DFN(...$args): HTMLElement
+function DFN(mixed ...$args): HTMLElement
 {
     return new HTMLElement("dfn", $args);
 }
-function EM(...$args): HTMLElement
+function EM(mixed ...$args): HTMLElement
 {
     return new HTMLElement("em", $args);
 }
-function I(...$args): HTMLElement
+function I(mixed ...$args): HTMLElement
 {
     return new HTMLElement("i", $args);
 }
-function KBD(...$args): HTMLElement
+function KBD(mixed ...$args): HTMLElement
 {
     return new HTMLElement("kbd", $args);
 }
-function MARK(...$args): HTMLElement
+function MARK(mixed ...$args): HTMLElement
 {
     return new HTMLElement("mark", $args);
 }
-function Q(...$args): HTMLElement
+function Q(mixed ...$args): HTMLElement
 {
     return new HTMLElement("q", $args);
 }
-function RB(...$args): HTMLElement
+function RB(mixed ...$args): HTMLElement
 {
     return new HTMLElement("rb", $args);
 }
-function RP(...$args): HTMLElement
+function RP(mixed ...$args): HTMLElement
 {
     return new HTMLElement("rp", $args);
 }
-function RT(...$args): HTMLElement
+function RT(mixed ...$args): HTMLElement
 {
     return new HTMLElement("rt", $args);
 }
-function RTC(...$args): HTMLElement
+function RTC(mixed ...$args): HTMLElement
 {
     return new HTMLElement("rtc", $args);
 }
-function RUBY(...$args): HTMLElement
+function RUBY(mixed ...$args): HTMLElement
 {
     return new HTMLElement("ruby", $args);
 }
-function S(...$args): HTMLElement
+function S(mixed ...$args): HTMLElement
 {
     return new HTMLElement("s", $args);
 }
-function SAMP(...$args): HTMLElement
+function SAMP(mixed ...$args): HTMLElement
 {
     return new HTMLElement("samp", $args);
 }
-function SMALL(...$args): HTMLElement
+function SMALL(mixed ...$args): HTMLElement
 {
     return new HTMLElement("small", $args);
 }
-function SPAN(...$args): HTMLElement
+function SPAN(mixed ...$args): HTMLElement
 {
     return new HTMLElement("span", $args);
 }
-function STRONG(...$args): HTMLElement
+function STRONG(mixed ...$args): HTMLElement
 {
     return new HTMLElement("strong", $args);
 }
-function SUB(...$args): HTMLElement
+function SUB(mixed ...$args): HTMLElement
 {
     return new HTMLElement("sub", $args);
 }
-function SUP(...$args): HTMLElement
+function SUP(mixed ...$args): HTMLElement
 {
     return new HTMLElement("sup", $args);
 }
-function TIME(...$args): HTMLElement
+function TIME(mixed ...$args): HTMLElement
 {
     return new HTMLElement("time", $args);
 }
-function TT(...$args): HTMLElement
+function TT(mixed ...$args): HTMLElement
 {
     return new HTMLElement("tt", $args);
 }
-function U(...$args): HTMLElement
+function U(mixed ...$args): HTMLElement
 {
     return new HTMLElement("u", $args);
 }
-function VAR_(...$args): HTMLElement
+function VAR_(mixed ...$args): HTMLElement
 {
     return new HTMLElement("var", $args);
 }
-function WBR(...$args): HTMLElement
+function WBR(mixed ...$args): HTMLElement
 {
     return new HTMLElement("wbr", $args);
 }
 
 # Image and multimedia
-function AREA(...$args): HTMLElement
+function AREA(mixed ...$args): HTMLElement
 {
     return new SelfClosingHTMLElement("area", $args);
 }
-function AUDIO(...$args): HTMLElement
+function AUDIO(mixed ...$args): HTMLElement
 {
     return new HTMLElement("audio", $args);
 }
-function IMG(...$args): HTMLElement
+function IMG(mixed ...$args): HTMLElement
 {
     return new SelfClosingHTMLElement("img", $args);
 }
-function MAP(...$args): HTMLElement
+function MAP(mixed ...$args): HTMLElement
 {
     return new HTMLElement("map", $args);
 }
-function TRACK(...$args): HTMLElement
+function TRACK(mixed ...$args): HTMLElement
 {
     return new SelfClosingHTMLElement("track", $args);
 }
-function VIDEO(...$args): HTMLElement
+function VIDEO(mixed ...$args): HTMLElement
 {
     return new HTMLElement("video", $args);
 }
 
 # Embedded content
-function APPLET(...$args): HTMLElement
+function APPLET(mixed ...$args): HTMLElement
 {
     return new HTMLElement("applet", $args);
 }
-function EMBED(...$args): HTMLElement
+function EMBED(mixed ...$args): HTMLElement
 {
     return new HTMLElement("embed", $args);
 }
-function IFRAME(...$args): HTMLElement
+function IFRAME(mixed ...$args): HTMLElement
 {
     return new HTMLElement("iframe", $args);
 }
-function NOEMBED(...$args): HTMLElement
+function NOEMBED(mixed ...$args): HTMLElement
 {
     return new HTMLElement("noembed", $args);
 }
-function OBJECT(...$args): HTMLElement
+function OBJECT(mixed ...$args): HTMLElement
 {
     return new HTMLElement("object", $args);
 }
-function PARAM(...$args): HTMLElement
+function PARAM(mixed ...$args): HTMLElement
 {
     return new HTMLElement("param", $args);
 }
-function PICTURE(...$args): HTMLElement
+function PICTURE(mixed ...$args): HTMLElement
 {
     return new HTMLElement("picture", $args);
 }
-function SOURCE(...$args): HTMLElement
+function SOURCE(mixed ...$args): HTMLElement
 {
     return new HTMLElement("source", $args);
 }
 
 # Scripting
-function CANVAS(...$args): HTMLElement
+function CANVAS(mixed ...$args): HTMLElement
 {
     return new HTMLElement("canvas", $args);
 }
-function NOSCRIPT(...$args): HTMLElement
+function NOSCRIPT(mixed ...$args): HTMLElement
 {
     return new HTMLElement("noscript", $args);
 }
-function SCRIPT(...$args): HTMLElement
+function SCRIPT(mixed ...$args): HTMLElement
 {
     return new HTMLElement("script", $args);
 }
 
 # Demarcating edits
-function DEL(...$args): HTMLElement
+function DEL(mixed ...$args): HTMLElement
 {
     return new HTMLElement("del", $args);
 }
-function INS(...$args): HTMLElement
+function INS(mixed ...$args): HTMLElement
 {
     return new HTMLElement("ins", $args);
 }
 
 # Table content
-function CAPTION(...$args): HTMLElement
+function CAPTION(mixed ...$args): HTMLElement
 {
     return new HTMLElement("caption", $args);
 }
-function COL(...$args): HTMLElement
+function COL(mixed ...$args): HTMLElement
 {
     return new SelfClosingHTMLElement("col", $args);
 }
-function COLGROUP(...$args): HTMLElement
+function COLGROUP(mixed ...$args): HTMLElement
 {
     return new HTMLElement("colgroup", $args);
 }
-function TABLE(...$args): HTMLElement
+function TABLE(mixed ...$args): HTMLElement
 {
     return new HTMLElement("table", $args);
 }
-function TBODY(...$args): HTMLElement
+function TBODY(mixed ...$args): HTMLElement
 {
     return new HTMLElement("tbody", $args);
 }
-function TD(...$args): HTMLElement
+function TD(mixed ...$args): HTMLElement
 {
     return new HTMLElement("td", $args);
 }
-function TFOOT(...$args): HTMLElement
+function TFOOT(mixed ...$args): HTMLElement
 {
     return new HTMLElement("tfoot", $args);
 }
-function TH(...$args): HTMLElement
+function TH(mixed ...$args): HTMLElement
 {
     return new HTMLElement("th", $args);
 }
-function THEAD(...$args): HTMLElement
+function THEAD(mixed ...$args): HTMLElement
 {
     return new HTMLElement("thead", $args);
 }
-function TR(...$args): HTMLElement
+function TR(mixed ...$args): HTMLElement
 {
     return new HTMLElement("tr", $args);
 }
 
 # Forms
-function BUTTON(...$args): HTMLElement
+function BUTTON(mixed ...$args): HTMLElement
 {
     return new HTMLElement("button", $args);
 }
-function DATALIST(...$args): HTMLElement
+function DATALIST(mixed ...$args): HTMLElement
 {
     return new HTMLElement("datalist", $args);
 }
-function FIELDSET(...$args): HTMLElement
+function FIELDSET(mixed ...$args): HTMLElement
 {
     return new HTMLElement("fieldset", $args);
 }
-function FORM(...$args): HTMLElement
+function FORM(mixed ...$args): HTMLElement
 {
     return new HTMLElement("form", $args);
 }
-function INPUT(...$args): HTMLElement
+function INPUT(mixed ...$args): HTMLElement
 {
     return new SelfClosingHTMLElement("input", $args);
 }
-function LABEL(...$args): HTMLElement
+function LABEL(mixed ...$args): HTMLElement
 {
     return new HTMLElement("label", $args);
 }
-function LEGEND(...$args): HTMLElement
+function LEGEND(mixed ...$args): HTMLElement
 {
     return new HTMLElement("legend", $args);
 }
-function METER(...$args): HTMLElement
+function METER(mixed ...$args): HTMLElement
 {
     return new HTMLElement("meter", $args);
 }
-function OPTGROUP(...$args): HTMLElement
+function OPTGROUP(mixed ...$args): HTMLElement
 {
     return new HTMLElement("optgroup", $args);
 }
-function OPTION(...$args): HTMLElement
+function OPTION(mixed ...$args): HTMLElement
 {
     return new HTMLElement("option", $args);
 }
-function OUTPUT(...$args): HTMLElement
+function OUTPUT(mixed ...$args): HTMLElement
 {
     return new HTMLElement("output", $args);
 }
-function PROGRESS(...$args): HTMLElement
+function PROGRESS(mixed ...$args): HTMLElement
 {
     return new HTMLElement("progress", $args);
 }
-function SELECT(...$args): HTMLElement
+function SELECT(mixed ...$args): HTMLElement
 {
     return new HTMLElement("select", $args);
 }
-function TEXTAREA(...$args): HTMLElement
+function TEXTAREA(mixed ...$args): HTMLElement
 {
     return new HTMLElement("textarea", $args);
 }
 
 # Interactive elements
-function DETAILS(...$args): HTMLElement
+function DETAILS(mixed ...$args): HTMLElement
 {
     return new HTMLElement("details", $args);
 }
-function DIALOG(...$args): HTMLElement
+function DIALOG(mixed ...$args): HTMLElement
 {
     return new HTMLElement("dialog", $args);
 }
-function SUMMARY(...$args): HTMLElement
+function SUMMARY(mixed ...$args): HTMLElement
 {
     return new HTMLElement("summary", $args);
 }
