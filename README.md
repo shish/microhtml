@@ -46,3 +46,10 @@ composer install
 ./vendor/bin/phpunit tests
 ./vendor/bin/phpstan analyse src tests --level 5
 ```
+
+Release
+-------
+```
+git tag v1.2.3
+git push --tags
+```
