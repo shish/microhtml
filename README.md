@@ -38,3 +38,11 @@ print($page);
 </html>
 ```
 
+Testing
+-------
+```
+composer install
+./vendor/bin/php-cs-fixer fix
+./vendor/bin/phpunit tests
+./vendor/bin/phpstan analyse src tests --level 5
+```
