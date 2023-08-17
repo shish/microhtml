@@ -7,9 +7,14 @@ namespace MicroHTML;
 class HTMLElement
 {
     protected string $tag;
+    /** @var array<string, mixed> */
     protected array $attrs;
+    /** @var mixed[] */
     protected array $children;
 
+    /**
+     * @param mixed[] $args
+     */
     public function __construct(string $tag, array $args)
     {
         $this->tag = $tag;
@@ -105,7 +110,7 @@ class EmptyHTMLElement extends HTMLElement
 
 class RawHTMLElement extends HTMLElement
 {
-    private $html;
+    private string $html;
 
     public function __construct(string $html)
     {
@@ -127,6 +132,7 @@ function emptyHTML(mixed ...$args): HTMLElement
 {
     return new EmptyHTMLElement($args);
 }
+/** @param mixed[] $pieces */
 function joinHTML(HTMLElement|string $glue, array $pieces): HTMLElement
 {
     $out = emptyHTML();
