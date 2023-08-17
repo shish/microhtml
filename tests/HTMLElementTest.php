@@ -32,7 +32,7 @@ class HTMLElementTest extends \PHPUnit\Framework\TestCase
     {
         $this->assertEquals(
             "<a href='hello.html'></a>",
-            A(["href"=>"hello.html"])
+            A(["href" => "hello.html"])
         );
     }
 
@@ -40,7 +40,7 @@ class HTMLElementTest extends \PHPUnit\Framework\TestCase
     {
         $this->assertEquals(
             "<a href='hello.html' target='_blank'></a>",
-            A(["href"=>"hello.html", "target"=>"_blank"])
+            A(["href" => "hello.html", "target" => "_blank"])
         );
     }
 
@@ -48,7 +48,7 @@ class HTMLElementTest extends \PHPUnit\Framework\TestCase
     {
         $this->assertEquals(
             "<a href='esc&#039; ape=&#039;foo'></a>",
-            A(["href"=>"esc' ape='foo"])
+            A(["href" => "esc' ape='foo"])
         );
     }
 
@@ -56,7 +56,7 @@ class HTMLElementTest extends \PHPUnit\Framework\TestCase
     {
         $this->assertEquals(
             "<input required />",
-            INPUT(["required"=>true])
+            INPUT(["required" => true])
         );
     }
 
@@ -64,7 +64,7 @@ class HTMLElementTest extends \PHPUnit\Framework\TestCase
     {
         $this->assertEquals(
             "<input />",
-            INPUT(["required"=>false])
+            INPUT(["required" => false])
         );
     }
 
@@ -72,7 +72,7 @@ class HTMLElementTest extends \PHPUnit\Framework\TestCase
     {
         $this->assertEquals(
             "<input />",
-            INPUT(["value"=>null])
+            INPUT(["value" => null])
         );
     }
 
@@ -80,7 +80,7 @@ class HTMLElementTest extends \PHPUnit\Framework\TestCase
     {
         $this->assertEquals(
             "<input value='42' />",
-            INPUT(["value"=>42])
+            INPUT(["value" => 42])
         );
     }
 
