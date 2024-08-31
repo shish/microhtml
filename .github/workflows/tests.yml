@@ -41,10 +41,7 @@ jobs:
         path: vendor
         key: vendor-${{ hashFiles('composer.json') }}
     - uses: php-actions/composer@v6
-    - uses: php-actions/phpstan@v3
-      with:
-        path: src
-        level: 5
+    - run: ./vendor/bin/phpstan analyse src --level 5
 
   format:
     name: Formatting
