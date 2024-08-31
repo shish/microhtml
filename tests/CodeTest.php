@@ -13,7 +13,7 @@ class CodeTest extends \PHPUnit\Framework\TestCase
             "VAR_" => "var"
         ];
         $lines = file("src/microhtml.php");
-        if(!$lines) {
+        if (!$lines) {
             $this->assertTrue($lines);
         }
         foreach ($lines as $line) {
