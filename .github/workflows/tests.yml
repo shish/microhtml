@@ -22,18 +22,17 @@ jobs:
       with:
         path: vendor
         key: vendor-${{ hashFiles('composer.json') }}
-    - uses: php-actions/composer@v6
-    - name: Set up PHP
-      uses: shivammathur/setup-php@master
+    - uses: shivammathur/setup-php@master
       with:
         php-version: ${{ matrix.php }}
         coverage: pcov
+    - uses: php-actions/composer@v6
     - name: Run test suite
       run: vendor/bin/phpunit tests --coverage-text --coverage-filter src
 
   static:
     name: Static Analysis
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
     - uses: actions/checkout@v4
     - uses: actions/cache@v4
@@ -45,7 +44,7 @@ jobs:
 
   format:
     name: Formatting
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
     - uses: actions/checkout@v4
     - uses: actions/cache@v4
