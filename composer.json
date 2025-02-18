@@ -30,8 +30,17 @@
         ]
     },
     "scripts": {
-        "test": "XDEBUG_MODE=coverage phpunit",
-        "analyse": "phpstan analyse",
-        "format": "PHP_CS_FIXER_IGNORE_ENV=1 php-cs-fixer fix"
+        "check": [
+            "@format",
+            "@analyse",
+            "@test"
+        ],
+        "stan": [
+            "@analyse"
+        ],
+        "format": "PHP_CS_FIXER_IGNORE_ENV=1 php-cs-fixer fix",
+        "analyse-ci": "phpstan analyse --error-format=github",
+        "analyse": "phpstan analyse --error-format=raw",
+        "test": "XDEBUG_MODE=coverage phpunit"
     }
 }
