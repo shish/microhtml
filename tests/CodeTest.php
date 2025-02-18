@@ -13,9 +13,7 @@ class CodeTest extends \PHPUnit\Framework\TestCase
             "VAR_" => "var"
         ];
         $lines = file("src/microhtml.php");
-        if (!$lines) {
-            $this->assertTrue($lines);
-        }
+        $this->assertNotFalse($lines);
         foreach ($lines as $line) {
             if (preg_match("/function ([A-Z][^(]*)/", $line, $matches)) {
                 $fun = $matches[1];

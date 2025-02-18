@@ -104,6 +104,14 @@ class HTMLElementTest extends \PHPUnit\Framework\TestCase
         );
     }
 
+    public function testElementsAndTextChildren(): void
+    {
+        $this->assertEquals(
+            "<p><a></a>hello<div></div></p>",
+            P(A(), "hello", DIV())
+        );
+    }
+
     /*
      * text
      */
