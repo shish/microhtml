@@ -2,7 +2,10 @@
     "name": "shish/microhtml",
     "type": "library",
     "description": "A minimal HTML generating library",
-    "keywords": ["generator", "html"],
+    "keywords": [
+        "generator",
+        "html"
+    ],
     "homepage": "https://github.com/shish/microhtml",
     "license": "MIT",
     "authors": [
@@ -17,13 +20,18 @@
         "php": "^8.2"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer" : "^3.64",
+        "friendsofphp/php-cs-fixer": "^3.64",
         "phpunit/phpunit": "^11.0",
-        "phpstan/phpstan": "^1.12"
+        "phpstan/phpstan": "^2.0"
     },
     "autoload": {
         "files": [
             "src/microhtml.php"
         ]
+    },
+    "scripts": {
+        "test": "XDEBUG_MODE=coverage phpunit",
+        "analyse": "phpstan analyse",
+        "format": "PHP_CS_FIXER_IGNORE_ENV=1 php-cs-fixer fix"
     }
 }
