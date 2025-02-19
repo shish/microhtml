@@ -18,8 +18,10 @@ class CodeTest extends \PHPUnit\Framework\TestCase
             if (preg_match("/function ([A-Z][^(]*)/", $line, $matches)) {
                 $fun = $matches[1];
                 $tag = $exceptions[$fun] ?? strtolower($fun);
+                $name = "\MicroHTML\\$fun";
+                $this->assertIsCallable($name);
                 // Call eg \MicroHTML\SECTION() and check that it contains "section"
-                $this->assertStringContainsString($tag, (string)"\MicroHTML\\$fun"());
+                $this->assertStringContainsString($tag, (string)$name());
             }
         }
     }
