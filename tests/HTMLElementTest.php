@@ -179,6 +179,24 @@ class HTMLElementTest extends \PHPUnit\Framework\TestCase
         );
     }
 
+    public function testSelfClosingCantHaveChildren(): void
+    {
+        $this->expectException(TypeError::class);
+        $this->assertEquals(
+            "<br />",
+            // @phpstan-ignore-next-line
+            BR(P())
+        );
+    }
+
+    public function testNotSelfClosing(): void
+    {
+        $this->assertEquals(
+            "<p></p>",
+            P()
+        );
+    }
+
     public function testEmpty(): void
     {
         $this->assertEquals(
@@ -204,6 +222,18 @@ class HTMLElementTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals(
             "<p>A</p><br /><p>B</p><br />C",
             joinHTML(BR(), [P("A"), P("B"), "C"])
+        );
+    }
+
+    public function testJoinFiltered(): void
+    {
+        $this->assertEquals(
+            "<p>A</p>, C",
+            joinHTML(", ", [P("A"), null, "C"], filterNulls: true)
+        );
+        $this->assertEquals(
+            "<p>A</p>, , C",
+            joinHTML(", ", [P("A"), null, "C"], filterNulls: false)
         );
     }
 }

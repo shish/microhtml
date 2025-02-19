@@ -4,25 +4,36 @@ declare(strict_types=1);
 
 namespace MicroHTML;
 
+/**
+ * @phpstan-type Attrs array<string,string|null|bool|int|float>
+ * @phpstan-type Child \MicroHTML\HTMLElement|string|null|bool|int|float
+ * @phpstan-type Arg Attrs|Child
+ */
 class HTMLElement
 {
     protected string $tag;
+    /** @var Attrs $attrs */
     protected array $attrs;
+    /** @var array<Child> $children */
     protected array $children;
 
+    /** @param array<Arg> $args */
     public function __construct(string $tag, array $args)
     {
         $this->tag = $tag;
 
         if (count($args) > 0 && is_array($args[0])) {
             $this->attrs = $args[0];
+            // @phpstan-ignore-next-line
             $this->children = array_slice($args, 1);
         } else {
             $this->attrs = [];
+            // @phpstan-ignore-next-line
             $this->children = $args;
         }
     }
 
+    /** @param Child $args */
     public function appendChild(...$args): void
     {
         foreach ($args as $arg) {
@@ -58,10 +69,10 @@ class HTMLElement
             if ($child instanceof HTMLElement) {
                 $sub .= $child;
             } else {
-                if (is_null($child)) {
+                if (is_null($child) || is_bool($child)) {
                     $child = "";
                 }
-                if (is_numeric($child) || is_bool($child)) {
+                if (is_numeric($child)) {
                     $child = (string)$child;
                 }
                 $sub .= htmlentities($child, ENT_QUOTES, "UTF-8");
@@ -79,8 +90,21 @@ class HTMLElement
     }
 }
 
+/**
+ * https://developer.mozilla.org/en-US/docs/Glossary/Void_element
+ *
+ * @phpstan-import-type Attrs from HTMLElement
+ */
 class SelfClosingHTMLElement extends HTMLElement
 {
+    /**
+     * @param Attrs $attrs
+     */
+    public function __construct(string $tag, array $attrs)
+    {
+        parent::__construct($tag, [$attrs]);
+    }
+
     public function __toString(): string
     {
         $tag = $this->tag;
@@ -89,8 +113,14 @@ class SelfClosingHTMLElement extends HTMLElement
     }
 }
 
+/**
+ * @phpstan-import-type Child from HTMLElement
+ */
 class EmptyHTMLElement extends HTMLElement
 {
+    /**
+     * @param array<Child> $args
+     */
     public function __construct(array $args)
     {
         parent::__construct("", $args);
@@ -103,9 +133,14 @@ class EmptyHTMLElement extends HTMLElement
     }
 }
 
+function emptyHTML(...$args): HTMLElement
+{
+    return new EmptyHTMLElement($args);
+}
+
 class RawHTMLElement extends HTMLElement
 {
-    private $html;
+    private string $html;
 
     public function __construct(string $html)
     {
@@ -123,15 +158,18 @@ function rawHTML(string $html): HTMLElement
 {
     return new RawHTMLElement($html);
 }
-function emptyHTML(...$args): HTMLElement
-{
-    return new EmptyHTMLElement($args);
-}
-function joinHTML(HTMLElement|string $glue, array $pieces): HTMLElement
+
+/**
+ * @param array<\MicroHTML\HTMLElement|string|null|bool|int|float> $pieces
+ */
+function joinHTML(HTMLElement|string $glue, array $pieces, bool $filterNulls = false): HTMLElement
 {
     $out = emptyHTML();
     $n = 0;
     foreach ($pieces as $piece) {
+        if ($filterNulls && $piece === null) {
+            continue;
+        }
         if ($n++ > 0) {
             $out->appendChild($glue);
         }
@@ -147,21 +185,24 @@ function HTML(...$args): HTMLElement
 }
 
 # Document metadata
-function BASE(...$args): HTMLElement
+/** @param array<string,string|null|bool|int|float> $attrs */
+function BASE(array $attrs = []): SelfClosingHTMLElement
 {
-    return new SelfClosingHTMLElement("base", $args);
+    return new SelfClosingHTMLElement("base", $attrs);
 }
 function HEAD(...$args): HTMLElement
 {
     return new HTMLElement("head", $args);
 }
-function LINK(...$args): HTMLElement
+/** @param array<string,string|null|bool|int|float> $attrs */
+function LINK(array $attrs = []): SelfClosingHTMLElement
 {
-    return new SelfClosingHTMLElement("link", $args);
+    return new SelfClosingHTMLElement("link", $attrs);
 }
-function META(...$args): HTMLElement
+/** @param array<string,string|null|bool|int|float> $attrs */
+function META(array $attrs = []): SelfClosingHTMLElement
 {
-    return new SelfClosingHTMLElement("meta", $args);
+    return new SelfClosingHTMLElement("meta", $attrs);
 }
 function STYLE(...$args): HTMLElement
 {
@@ -273,9 +314,10 @@ function FIGURE(...$args): HTMLElement
 {
     return new HTMLElement("figure", $args);
 }
-function HR(...$args): HTMLElement
+/** @param array<string,string|null|bool|int|float> $attrs */
+function HR(array $attrs = []): SelfClosingHTMLElement
 {
-    return new SelfClosingHTMLElement("hr", $args);
+    return new SelfClosingHTMLElement("hr", $attrs);
 }
 function LI(...$args): HTMLElement
 {
@@ -319,9 +361,10 @@ function BDO(...$args): HTMLElement
 {
     return new HTMLElement("bdo", $args);
 }
-function BR(...$args): HTMLElement
+/** @param array<string,string|null|bool|int|float> $attrs */
+function BR(array $attrs = []): SelfClosingHTMLElement
 {
-    return new SelfClosingHTMLElement("br", $args);
+    return new SelfClosingHTMLElement("br", $attrs);
 }
 function CITE(...$args): HTMLElement
 {
@@ -423,31 +466,35 @@ function VAR_(...$args): HTMLElement
 {
     return new HTMLElement("var", $args);
 }
-function WBR(...$args): HTMLElement
+/** @param array<string,string|null|bool|int|float> $attrs */
+function WBR(array $attrs = []): SelfClosingHTMLElement
 {
-    return new HTMLElement("wbr", $args);
+    return new SelfClosingHTMLElement("wbr", $attrs);
 }
 
 # Image and multimedia
-function AREA(...$args): HTMLElement
+/** @param array<string,string|null|bool|int|float> $attrs */
+function AREA(array $attrs = []): SelfClosingHTMLElement
 {
-    return new SelfClosingHTMLElement("area", $args);
+    return new SelfClosingHTMLElement("area", $attrs);
 }
 function AUDIO(...$args): HTMLElement
 {
     return new HTMLElement("audio", $args);
 }
-function IMG(...$args): HTMLElement
+/** @param array<string,string|null|bool|int|float> $attrs */
+function IMG(array $attrs = []): SelfClosingHTMLElement
 {
-    return new SelfClosingHTMLElement("img", $args);
+    return new SelfClosingHTMLElement("img", $attrs);
 }
 function MAP(...$args): HTMLElement
 {
     return new HTMLElement("map", $args);
 }
-function TRACK(...$args): HTMLElement
+/** @param array<string,string|null|bool|int|float> $attrs */
+function TRACK(array $attrs = []): SelfClosingHTMLElement
 {
-    return new SelfClosingHTMLElement("track", $args);
+    return new SelfClosingHTMLElement("track", $attrs);
 }
 function VIDEO(...$args): HTMLElement
 {
@@ -459,9 +506,10 @@ function APPLET(...$args): HTMLElement
 {
     return new HTMLElement("applet", $args);
 }
-function EMBED(...$args): HTMLElement
+/** @param array<string,string|null|bool|int|float> $attrs */
+function EMBED(array $attrs = []): SelfClosingHTMLElement
 {
-    return new HTMLElement("embed", $args);
+    return new SelfClosingHTMLElement("embed", $attrs);
 }
 function IFRAME(...$args): HTMLElement
 {
@@ -475,17 +523,19 @@ function OBJECT(...$args): HTMLElement
 {
     return new HTMLElement("object", $args);
 }
-function PARAM(...$args): HTMLElement
+/** @param array<string,string|null|bool|int|float> $attrs */
+function PARAM(array $attrs = []): SelfClosingHTMLElement
 {
-    return new HTMLElement("param", $args);
+    return new SelfClosingHTMLElement("param", $attrs);
 }
 function PICTURE(...$args): HTMLElement
 {
     return new HTMLElement("picture", $args);
 }
-function SOURCE(...$args): HTMLElement
+/** @param array<string,string|null|bool|int|float> $attrs */
+function SOURCE(array $attrs = []): SelfClosingHTMLElement
 {
-    return new HTMLElement("source", $args);
+    return new SelfClosingHTMLElement("source", $attrs);
 }
 
 # Scripting
@@ -517,9 +567,10 @@ function CAPTION(...$args): HTMLElement
 {
     return new HTMLElement("caption", $args);
 }
-function COL(...$args): HTMLElement
+/** @param array<string,string|null|bool|int|float> $attrs */
+function COL(array $attrs = []): SelfClosingHTMLElement
 {
-    return new SelfClosingHTMLElement("col", $args);
+    return new SelfClosingHTMLElement("col", $attrs);
 }
 function COLGROUP(...$args): HTMLElement
 {
@@ -571,9 +622,10 @@ function FORM(...$args): HTMLElement
 {
     return new HTMLElement("form", $args);
 }
-function INPUT(...$args): HTMLElement
+/** @param array<string,string|null|bool|int|float> $attrs */
+function INPUT(array $attrs = []): SelfClosingHTMLElement
 {
-    return new SelfClosingHTMLElement("input", $args);
+    return new SelfClosingHTMLElement("input", $attrs);
 }
 function LABEL(...$args): HTMLElement
 {
