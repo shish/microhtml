@@ -6,7 +6,7 @@ namespace MicroHTML;
 
 /**
  * @phpstan-type Attrs array<string,string|\Stringable|null|bool|int|float>
- * @phpstan-type Child \MicroHTML\HTMLElement|string|\Stringablenull|bool|int|float
+ * @phpstan-type Child \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float
  * @phpstan-type Arg Attrs|Child
  */
 class HTMLElement
