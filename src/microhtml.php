@@ -179,7 +179,7 @@ function HTML(...$args): HTMLElement
 }
 
 # Document metadata
-/** @param array<string,string|null|bool|int|float> $attrs */
+/** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
 function BASE(array $attrs = []): SelfClosingHTMLElement
 {
     return new SelfClosingHTMLElement("base", $attrs);
@@ -188,12 +188,12 @@ function HEAD(...$args): HTMLElement
 {
     return new HTMLElement("head", $args);
 }
-/** @param array<string,string|null|bool|int|float> $attrs */
+/** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
 function LINK(array $attrs = []): SelfClosingHTMLElement
 {
     return new SelfClosingHTMLElement("link", $attrs);
 }
-/** @param array<string,string|null|bool|int|float> $attrs */
+/** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
 function META(array $attrs = []): SelfClosingHTMLElement
 {
     return new SelfClosingHTMLElement("meta", $attrs);
@@ -308,7 +308,7 @@ function FIGURE(...$args): HTMLElement
 {
     return new HTMLElement("figure", $args);
 }
-/** @param array<string,string|null|bool|int|float> $attrs */
+/** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
 function HR(array $attrs = []): SelfClosingHTMLElement
 {
     return new SelfClosingHTMLElement("hr", $attrs);
@@ -355,7 +355,7 @@ function BDO(...$args): HTMLElement
 {
     return new HTMLElement("bdo", $args);
 }
-/** @param array<string,string|null|bool|int|float> $attrs */
+/** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
 function BR(array $attrs = []): SelfClosingHTMLElement
 {
     return new SelfClosingHTMLElement("br", $attrs);
@@ -460,14 +460,14 @@ function VAR_(...$args): HTMLElement
 {
     return new HTMLElement("var", $args);
 }
-/** @param array<string,string|null|bool|int|float> $attrs */
+/** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
 function WBR(array $attrs = []): SelfClosingHTMLElement
 {
     return new SelfClosingHTMLElement("wbr", $attrs);
 }
 
 # Image and multimedia
-/** @param array<string,string|null|bool|int|float> $attrs */
+/** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
 function AREA(array $attrs = []): SelfClosingHTMLElement
 {
     return new SelfClosingHTMLElement("area", $attrs);
@@ -476,7 +476,7 @@ function AUDIO(...$args): HTMLElement
 {
     return new HTMLElement("audio", $args);
 }
-/** @param array<string,string|null|bool|int|float> $attrs */
+/** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
 function IMG(array $attrs = []): SelfClosingHTMLElement
 {
     return new SelfClosingHTMLElement("img", $attrs);
@@ -485,7 +485,7 @@ function MAP(...$args): HTMLElement
 {
     return new HTMLElement("map", $args);
 }
-/** @param array<string,string|null|bool|int|float> $attrs */
+/** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
 function TRACK(array $attrs = []): SelfClosingHTMLElement
 {
     return new SelfClosingHTMLElement("track", $attrs);
@@ -500,7 +500,7 @@ function APPLET(...$args): HTMLElement
 {
     return new HTMLElement("applet", $args);
 }
-/** @param array<string,string|null|bool|int|float> $attrs */
+/** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
 function EMBED(array $attrs = []): SelfClosingHTMLElement
 {
     return new SelfClosingHTMLElement("embed", $attrs);
@@ -517,7 +517,7 @@ function OBJECT(...$args): HTMLElement
 {
     return new HTMLElement("object", $args);
 }
-/** @param array<string,string|null|bool|int|float> $attrs */
+/** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
 function PARAM(array $attrs = []): SelfClosingHTMLElement
 {
     return new SelfClosingHTMLElement("param", $attrs);
@@ -526,7 +526,7 @@ function PICTURE(...$args): HTMLElement
 {
     return new HTMLElement("picture", $args);
 }
-/** @param array<string,string|null|bool|int|float> $attrs */
+/** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
 function SOURCE(array $attrs = []): SelfClosingHTMLElement
 {
     return new SelfClosingHTMLElement("source", $attrs);
@@ -561,7 +561,7 @@ function CAPTION(...$args): HTMLElement
 {
     return new HTMLElement("caption", $args);
 }
-/** @param array<string,string|null|bool|int|float> $attrs */
+/** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
 function COL(array $attrs = []): SelfClosingHTMLElement
 {
     return new SelfClosingHTMLElement("col", $attrs);
@@ -616,7 +616,7 @@ function FORM(...$args): HTMLElement
 {
     return new HTMLElement("form", $args);
 }
-/** @param array<string,string|null|bool|int|float> $attrs */
+/** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
 function INPUT(array $attrs = []): SelfClosingHTMLElement
 {
     return new SelfClosingHTMLElement("input", $attrs);
