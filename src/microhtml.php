@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace MicroHTML;
 
 /**
- * @phpstan-type Attrs array<string,string|null|bool|int|float>
- * @phpstan-type Child \MicroHTML\HTMLElement|string|null|bool|int|float
+ * @phpstan-type Attrs array<string,string|\Stringable|null|bool|int|float>
+ * @phpstan-type Child \MicroHTML\HTMLElement|string|\Stringablenull|bool|int|float
  * @phpstan-type Arg Attrs|Child
  */
 class HTMLElement
@@ -52,10 +52,7 @@ class HTMLElement
                 // set to false, which is often easier than deleting
                 // the key from the attributes dictionary
             } else {
-                if (is_numeric($val)) {
-                    $val = (string)$val;
-                }
-                $val = htmlentities($val, ENT_QUOTES, "UTF-8");
+                $val = htmlentities((string)$val, ENT_QUOTES, "UTF-8");
                 $par .= " $name='$val'";
             }
         }
@@ -72,10 +69,7 @@ class HTMLElement
                 if (is_null($child) || is_bool($child)) {
                     $child = "";
                 }
-                if (is_numeric($child)) {
-                    $child = (string)$child;
-                }
-                $sub .= htmlentities($child, ENT_QUOTES, "UTF-8");
+                $sub .= htmlentities((string)$child, ENT_QUOTES, "UTF-8");
             }
         }
         return $sub;

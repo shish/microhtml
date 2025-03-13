@@ -13,6 +13,14 @@ use function MicroHTML\DIV;
 use function MicroHTML\rawHTML;
 use function MicroHTML\joinHTML;
 
+class MockUrl
+{
+    public function __toString(): string
+    {
+        return "https://example.com";
+    }
+}
+
 class HTMLElementTest extends \PHPUnit\Framework\TestCase
 {
     /*
@@ -234,6 +242,22 @@ class HTMLElementTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals(
             "<p>A</p>, , C",
             joinHTML(", ", [P("A"), null, "C"], filterNulls: false)
+        );
+    }
+
+    public function testStringableAttribute(): void
+    {
+        $this->assertEquals(
+            "<a href='https://example.com'>link</a>",
+            A(["href" => new MockUrl()], "link")
+        );
+    }
+
+    public function testStringableChild(): void
+    {
+        $this->assertEquals(
+            "<p>https://example.com</p>",
+            P(new MockUrl())
         );
     }
 }
