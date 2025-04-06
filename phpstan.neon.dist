@@ -2,6 +2,4 @@ parameters:
     paths:
         - ./src
         - ./tests
-    level: 7
-    ignoreErrors:
-        - '#^Function .* has parameter \$args with no type specified.$#'
+    level: 9
