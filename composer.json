@@ -38,9 +38,9 @@
         "stan": [
             "@analyse"
         ],
-        "format": "PHP_CS_FIXER_IGNORE_ENV=1 php-cs-fixer fix",
+        "format": "php-cs-fixer fix",
         "analyse-ci": "phpstan analyse --error-format=github",
         "analyse": "phpstan analyse --error-format=raw | sed -E 's/:([0-9]+):/:\\1 /'",
-        "test": "XDEBUG_MODE=coverage phpunit"
+        "test": "php -d xdebug.mode=coverage vendor/bin/phpunit"
     }
 }
