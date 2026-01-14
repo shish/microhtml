@@ -10,6 +10,22 @@ on:
   pull_request:
 
 jobs:
+  generate:
+    name: Generate Classes
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.4
+      - name: Install dependencies
+        run: composer install
+      - name: Generate classes.php
+        run: php gen.php
+      - name: Die if there are changes
+        run: git diff --exit-code
+
   tests:
     name: Unit Tests (PHP ${{ matrix.php }})
     strategy:
