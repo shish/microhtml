@@ -168,10 +168,16 @@ function generateNormalElement(string $funcName, string $tag): string
 {
     global $attrsType, $phpAttrsType, $childType;
     return <<<EOD
-/** @param $attrsType|$childType \$args - attribute array or children */
-function $funcName($phpAttrsType|$childType ...\$args): HTMLElement
+/**
+ * @param $attrsType|$childType \$arg0 HTML attributes or first child
+ * @param $childType \$args - any further children
+ */
+function $funcName(
+    $phpAttrsType|$childType \$arg0 = [],
+    $childType ...\$args,
+): HTMLElement
 {
-    return new HTMLElement("$tag", \$args);
+    return new HTMLElement("$tag", [\$arg0, ...\$args]);
 }
 EOD;
 }
@@ -181,7 +187,9 @@ function generateSelfClosingElement(string $funcName, string $tag): string
     global $attrsType, $phpAttrsType;
     return <<<EOD
 /** @param $attrsType \$attrs */
-function $funcName($phpAttrsType \$attrs = []): SelfClosingHTMLElement
+function $funcName(
+    $phpAttrsType \$attrs = [],
+): SelfClosingHTMLElement
 {
     return new SelfClosingHTMLElement("$tag", \$attrs);
 }

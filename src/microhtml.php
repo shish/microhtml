@@ -13,602 +13,1121 @@ require_once __DIR__ . '/classes.php';
 
 # https://developer.mozilla.org/en-US/docs/Web/HTML/Element
 # Main root
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function HTML(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("html", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function HTML(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("html", [$arg0, ...$args]);
 }
 
 # Document metadata
 /** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
-function BASE(array $attrs = []): SelfClosingHTMLElement
-{
+function BASE(
+    array $attrs = [],
+): SelfClosingHTMLElement {
     return new SelfClosingHTMLElement("base", $attrs);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function HEAD(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("head", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function HEAD(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("head", [$arg0, ...$args]);
 }
 /** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
-function LINK(array $attrs = []): SelfClosingHTMLElement
-{
+function LINK(
+    array $attrs = [],
+): SelfClosingHTMLElement {
     return new SelfClosingHTMLElement("link", $attrs);
 }
 /** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
-function META(array $attrs = []): SelfClosingHTMLElement
-{
+function META(
+    array $attrs = [],
+): SelfClosingHTMLElement {
     return new SelfClosingHTMLElement("meta", $attrs);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function STYLE(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("style", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function STYLE(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("style", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function TITLE(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("title", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function TITLE(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("title", [$arg0, ...$args]);
 }
 
 # Sectioning root
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function BODY(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("body", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function BODY(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("body", [$arg0, ...$args]);
 }
 
 # Content sectioning
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function ADDRESS(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("address", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function ADDRESS(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("address", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function ARTICLE(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("article", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function ARTICLE(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("article", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function ASIDE(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("aside", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function ASIDE(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("aside", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function FOOTER(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("footer", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function FOOTER(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("footer", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function HEADER(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("header", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function HEADER(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("header", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function H1(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("h1", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function H1(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("h1", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function H2(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("h2", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function H2(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("h2", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function H3(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("h3", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function H3(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("h3", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function H4(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("h4", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function H4(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("h4", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function H5(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("h5", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function H5(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("h5", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function H6(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("h6", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function H6(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("h6", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function HGROUP(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("hgroup", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function HGROUP(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("hgroup", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function MAIN(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("main", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function MAIN(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("main", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function NAV(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("nav", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function NAV(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("nav", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function SECTION(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("section", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function SECTION(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("section", [$arg0, ...$args]);
 }
 
 # Text content
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function BLOCKQUOTE(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("blockquote", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function BLOCKQUOTE(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("blockquote", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function DD(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("dd", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function DD(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("dd", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function DIR(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("dir", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function DIR(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("dir", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function DIV(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("div", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function DIV(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("div", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function DL(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("dl", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function DL(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("dl", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function DT(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("dt", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function DT(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("dt", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function FIGCAPTION(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("figcaption", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function FIGCAPTION(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("figcaption", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function FIGURE(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("figure", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function FIGURE(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("figure", [$arg0, ...$args]);
 }
 /** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
-function HR(array $attrs = []): SelfClosingHTMLElement
-{
+function HR(
+    array $attrs = [],
+): SelfClosingHTMLElement {
     return new SelfClosingHTMLElement("hr", $attrs);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function LI(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("li", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function LI(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("li", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function OL(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("ol", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function OL(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("ol", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function P(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("p", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function P(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("p", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function PRE(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("pre", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function PRE(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("pre", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function UL(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("ul", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function UL(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("ul", [$arg0, ...$args]);
 }
 
 # Inline text semantics
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function A(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("a", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function A(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("a", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function ABBR(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("abbr", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function ABBR(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("abbr", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function B(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("b", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function B(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("b", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function BDI(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("bdi", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function BDI(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("bdi", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function BDO(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("bdo", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function BDO(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("bdo", [$arg0, ...$args]);
 }
 /** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
-function BR(array $attrs = []): SelfClosingHTMLElement
-{
+function BR(
+    array $attrs = [],
+): SelfClosingHTMLElement {
     return new SelfClosingHTMLElement("br", $attrs);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function CITE(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("cite", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function CITE(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("cite", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function CODE(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("code", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function CODE(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("code", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function DATA(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("data", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function DATA(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("data", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function DFN(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("dfn", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function DFN(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("dfn", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function EM(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("em", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function EM(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("em", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function I(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("i", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function I(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("i", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function KBD(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("kbd", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function KBD(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("kbd", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function MARK(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("mark", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function MARK(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("mark", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function Q(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("q", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function Q(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("q", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function RB(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("rb", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function RB(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("rb", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function RP(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("rp", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function RP(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("rp", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function RT(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("rt", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function RT(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("rt", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function RTC(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("rtc", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function RTC(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("rtc", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function RUBY(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("ruby", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function RUBY(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("ruby", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function S(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("s", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function S(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("s", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function SAMP(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("samp", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function SAMP(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("samp", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function SMALL(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("small", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function SMALL(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("small", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function SPAN(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("span", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function SPAN(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("span", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function STRONG(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("strong", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function STRONG(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("strong", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function SUB(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("sub", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function SUB(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("sub", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function SUP(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("sup", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function SUP(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("sup", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function TIME(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("time", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function TIME(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("time", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function TT(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("tt", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function TT(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("tt", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function U(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("u", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function U(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("u", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function VAR_(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("var", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function VAR_(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("var", [$arg0, ...$args]);
 }
 /** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
-function WBR(array $attrs = []): SelfClosingHTMLElement
-{
+function WBR(
+    array $attrs = [],
+): SelfClosingHTMLElement {
     return new SelfClosingHTMLElement("wbr", $attrs);
 }
 
 # Image and multimedia
 /** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
-function AREA(array $attrs = []): SelfClosingHTMLElement
-{
+function AREA(
+    array $attrs = [],
+): SelfClosingHTMLElement {
     return new SelfClosingHTMLElement("area", $attrs);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function AUDIO(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("audio", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function AUDIO(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("audio", [$arg0, ...$args]);
 }
 /** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
-function IMG(array $attrs = []): SelfClosingHTMLElement
-{
+function IMG(
+    array $attrs = [],
+): SelfClosingHTMLElement {
     return new SelfClosingHTMLElement("img", $attrs);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function MAP(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("map", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function MAP(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("map", [$arg0, ...$args]);
 }
 /** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
-function TRACK(array $attrs = []): SelfClosingHTMLElement
-{
+function TRACK(
+    array $attrs = [],
+): SelfClosingHTMLElement {
     return new SelfClosingHTMLElement("track", $attrs);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function VIDEO(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("video", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function VIDEO(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("video", [$arg0, ...$args]);
 }
 
 # Embedded content
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function APPLET(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("applet", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function APPLET(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("applet", [$arg0, ...$args]);
 }
 /** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
-function EMBED(array $attrs = []): SelfClosingHTMLElement
-{
+function EMBED(
+    array $attrs = [],
+): SelfClosingHTMLElement {
     return new SelfClosingHTMLElement("embed", $attrs);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function IFRAME(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("iframe", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function IFRAME(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("iframe", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function NOEMBED(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("noembed", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function NOEMBED(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("noembed", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function OBJECT(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("object", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function OBJECT(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("object", [$arg0, ...$args]);
 }
 /** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
-function PARAM(array $attrs = []): SelfClosingHTMLElement
-{
+function PARAM(
+    array $attrs = [],
+): SelfClosingHTMLElement {
     return new SelfClosingHTMLElement("param", $attrs);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function PICTURE(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("picture", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function PICTURE(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("picture", [$arg0, ...$args]);
 }
 /** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
-function SOURCE(array $attrs = []): SelfClosingHTMLElement
-{
+function SOURCE(
+    array $attrs = [],
+): SelfClosingHTMLElement {
     return new SelfClosingHTMLElement("source", $attrs);
 }
 
 # Scripting
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function CANVAS(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("canvas", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function CANVAS(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("canvas", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function NOSCRIPT(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("noscript", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function NOSCRIPT(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("noscript", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function SCRIPT(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("script", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function SCRIPT(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("script", [$arg0, ...$args]);
 }
 
 # Demarcating edits
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function DEL(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("del", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function DEL(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("del", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function INS(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("ins", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function INS(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("ins", [$arg0, ...$args]);
 }
 
 # Table content
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function CAPTION(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("caption", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function CAPTION(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("caption", [$arg0, ...$args]);
 }
 /** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
-function COL(array $attrs = []): SelfClosingHTMLElement
-{
+function COL(
+    array $attrs = [],
+): SelfClosingHTMLElement {
     return new SelfClosingHTMLElement("col", $attrs);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function COLGROUP(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("colgroup", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function COLGROUP(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("colgroup", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function TABLE(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("table", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function TABLE(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("table", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function TBODY(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("tbody", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function TBODY(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("tbody", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function TD(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("td", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function TD(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("td", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function TFOOT(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("tfoot", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function TFOOT(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("tfoot", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function TH(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("th", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function TH(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("th", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function THEAD(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("thead", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function THEAD(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("thead", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function TR(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("tr", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function TR(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("tr", [$arg0, ...$args]);
 }
 
 # Forms
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function BUTTON(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("button", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function BUTTON(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("button", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function DATALIST(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("datalist", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function DATALIST(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("datalist", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function FIELDSET(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("fieldset", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function FIELDSET(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("fieldset", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function FORM(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("form", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function FORM(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("form", [$arg0, ...$args]);
 }
 /** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
-function INPUT(array $attrs = []): SelfClosingHTMLElement
-{
+function INPUT(
+    array $attrs = [],
+): SelfClosingHTMLElement {
     return new SelfClosingHTMLElement("input", $attrs);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function LABEL(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("label", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function LABEL(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("label", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function LEGEND(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("legend", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function LEGEND(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("legend", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function METER(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("meter", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function METER(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("meter", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function OPTGROUP(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("optgroup", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function OPTGROUP(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("optgroup", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function OPTION(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("option", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function OPTION(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("option", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function OUTPUT(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("output", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function OUTPUT(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("output", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function PROGRESS(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("progress", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function PROGRESS(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("progress", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function SELECT(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("select", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function SELECT(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("select", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function TEXTAREA(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("textarea", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function TEXTAREA(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("textarea", [$arg0, ...$args]);
 }
 
 # Interactive elements
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function DETAILS(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("details", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function DETAILS(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("details", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function DIALOG(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("dialog", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function DIALOG(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("dialog", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - attribute array or children */
-function SUMMARY(array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args): HTMLElement
-{
-    return new HTMLElement("summary", $args);
+/**
+ * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ */
+function SUMMARY(
+    array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
+    \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float ...$args,
+): HTMLElement {
+    return new HTMLElement("summary", [$arg0, ...$args]);
 }
