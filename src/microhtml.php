@@ -15,7 +15,7 @@ require_once __DIR__ . '/classes.php';
 # Main root
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function HTML(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -33,7 +33,7 @@ function BASE(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function HEAD(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -55,7 +55,7 @@ function META(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function STYLE(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -65,7 +65,7 @@ function STYLE(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function TITLE(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -77,7 +77,7 @@ function TITLE(
 # Sectioning root
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function BODY(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -89,7 +89,7 @@ function BODY(
 # Content sectioning
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function ADDRESS(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -99,7 +99,7 @@ function ADDRESS(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function ARTICLE(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -109,7 +109,7 @@ function ARTICLE(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function ASIDE(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -119,7 +119,7 @@ function ASIDE(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function FOOTER(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -129,7 +129,7 @@ function FOOTER(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function HEADER(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -139,7 +139,7 @@ function HEADER(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function H1(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -149,7 +149,7 @@ function H1(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function H2(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -159,7 +159,7 @@ function H2(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function H3(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -169,7 +169,7 @@ function H3(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function H4(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -179,7 +179,7 @@ function H4(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function H5(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -189,7 +189,7 @@ function H5(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function H6(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -199,7 +199,7 @@ function H6(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function HGROUP(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -209,7 +209,7 @@ function HGROUP(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function MAIN(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -219,7 +219,7 @@ function MAIN(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function NAV(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -229,7 +229,7 @@ function NAV(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function SECTION(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -241,7 +241,7 @@ function SECTION(
 # Text content
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function BLOCKQUOTE(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -251,7 +251,7 @@ function BLOCKQUOTE(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function DD(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -261,7 +261,7 @@ function DD(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function DIR(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -271,7 +271,7 @@ function DIR(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function DIV(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -281,7 +281,7 @@ function DIV(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function DL(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -291,7 +291,7 @@ function DL(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function DT(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -301,7 +301,7 @@ function DT(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function FIGCAPTION(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -311,7 +311,7 @@ function FIGCAPTION(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function FIGURE(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -327,7 +327,7 @@ function HR(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function LI(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -337,7 +337,7 @@ function LI(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function OL(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -347,7 +347,7 @@ function OL(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function P(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -357,7 +357,7 @@ function P(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function PRE(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -367,7 +367,7 @@ function PRE(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function UL(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -379,7 +379,7 @@ function UL(
 # Inline text semantics
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function A(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -389,7 +389,7 @@ function A(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function ABBR(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -399,7 +399,7 @@ function ABBR(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function B(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -409,7 +409,7 @@ function B(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function BDI(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -419,7 +419,7 @@ function BDI(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function BDO(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -435,7 +435,7 @@ function BR(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function CITE(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -445,7 +445,7 @@ function CITE(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function CODE(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -455,7 +455,7 @@ function CODE(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function DATA(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -465,7 +465,7 @@ function DATA(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function DFN(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -475,7 +475,7 @@ function DFN(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function EM(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -485,7 +485,7 @@ function EM(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function I(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -495,7 +495,7 @@ function I(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function KBD(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -505,7 +505,7 @@ function KBD(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function MARK(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -515,7 +515,7 @@ function MARK(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function Q(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -525,7 +525,7 @@ function Q(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function RB(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -535,7 +535,7 @@ function RB(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function RP(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -545,7 +545,7 @@ function RP(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function RT(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -555,7 +555,7 @@ function RT(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function RTC(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -565,7 +565,7 @@ function RTC(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function RUBY(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -575,7 +575,7 @@ function RUBY(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function S(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -585,7 +585,7 @@ function S(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function SAMP(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -595,7 +595,7 @@ function SAMP(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function SMALL(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -605,7 +605,7 @@ function SMALL(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function SPAN(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -615,7 +615,7 @@ function SPAN(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function STRONG(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -625,7 +625,7 @@ function STRONG(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function SUB(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -635,7 +635,7 @@ function SUB(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function SUP(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -645,7 +645,7 @@ function SUP(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function TIME(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -655,7 +655,7 @@ function TIME(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function TT(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -665,7 +665,7 @@ function TT(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function U(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -675,7 +675,7 @@ function U(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function VAR_(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -699,7 +699,7 @@ function AREA(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function AUDIO(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -715,7 +715,7 @@ function IMG(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function MAP(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -731,7 +731,7 @@ function TRACK(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function VIDEO(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -743,7 +743,7 @@ function VIDEO(
 # Embedded content
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function APPLET(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -759,7 +759,7 @@ function EMBED(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function IFRAME(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -769,7 +769,7 @@ function IFRAME(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function NOEMBED(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -779,7 +779,7 @@ function NOEMBED(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function OBJECT(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -795,7 +795,7 @@ function PARAM(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function PICTURE(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -813,7 +813,7 @@ function SOURCE(
 # Scripting
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function CANVAS(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -823,7 +823,7 @@ function CANVAS(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function NOSCRIPT(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -833,7 +833,7 @@ function NOSCRIPT(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function SCRIPT(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -845,7 +845,7 @@ function SCRIPT(
 # Demarcating edits
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function DEL(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -855,7 +855,7 @@ function DEL(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function INS(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -867,7 +867,7 @@ function INS(
 # Table content
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function CAPTION(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -883,7 +883,7 @@ function COL(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function COLGROUP(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -893,7 +893,7 @@ function COLGROUP(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function TABLE(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -903,7 +903,7 @@ function TABLE(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function TBODY(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -913,7 +913,7 @@ function TBODY(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function TD(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -923,7 +923,7 @@ function TD(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function TFOOT(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -933,7 +933,7 @@ function TFOOT(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function TH(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -943,7 +943,7 @@ function TH(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function THEAD(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -953,7 +953,7 @@ function THEAD(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function TR(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -965,7 +965,7 @@ function TR(
 # Forms
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function BUTTON(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -975,7 +975,7 @@ function BUTTON(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function DATALIST(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -985,7 +985,7 @@ function DATALIST(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function FIELDSET(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -995,7 +995,7 @@ function FIELDSET(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function FORM(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -1011,7 +1011,7 @@ function INPUT(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function LABEL(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -1021,7 +1021,7 @@ function LABEL(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function LEGEND(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -1031,7 +1031,7 @@ function LEGEND(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function METER(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -1041,7 +1041,7 @@ function METER(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function OPTGROUP(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -1051,7 +1051,7 @@ function OPTGROUP(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function OPTION(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -1061,7 +1061,7 @@ function OPTION(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function OUTPUT(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -1071,7 +1071,7 @@ function OUTPUT(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function PROGRESS(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -1081,7 +1081,7 @@ function PROGRESS(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function SELECT(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -1091,7 +1091,7 @@ function SELECT(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function TEXTAREA(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -1103,7 +1103,7 @@ function TEXTAREA(
 # Interactive elements
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function DETAILS(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -1113,7 +1113,7 @@ function DETAILS(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function DIALOG(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],
@@ -1123,7 +1123,7 @@ function DIALOG(
 }
 /**
  * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
- * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args - any further children
+ * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function SUMMARY(
     array|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 = [],

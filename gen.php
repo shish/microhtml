@@ -170,7 +170,7 @@ function generateNormalElement(string $funcName, string $tag): string
     return <<<EOD
 /**
  * @param $attrsType|$childType \$arg0 HTML attributes or first child
- * @param $childType \$args - any further children
+ * @param $childType \$args any further children
  */
 function $funcName(
     $phpAttrsType|$childType \$arg0 = [],
