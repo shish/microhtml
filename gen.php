@@ -175,8 +175,7 @@ function generateNormalElement(string $funcName, string $tag): string
 function $funcName(
     $phpAttrsType|$childType \$arg0 = [],
     $childType ...\$args,
-): HTMLElement
-{
+): HTMLElement {
     return new HTMLElement("$tag", [\$arg0, ...\$args]);
 }
 EOD;
@@ -189,8 +188,7 @@ function generateSelfClosingElement(string $funcName, string $tag): string
 /** @param $attrsType \$attrs */
 function $funcName(
     $phpAttrsType \$attrs = [],
-): SelfClosingHTMLElement
-{
+): SelfClosingHTMLElement {
     return new SelfClosingHTMLElement("$tag", \$attrs);
 }
 EOD;
