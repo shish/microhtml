@@ -8,7 +8,8 @@
  * 2. Generated HTML element functions based on the $elements definition
  */
 
-enum ElementType {
+enum ElementType
+{
     case Normal;
     case Void;
 }
@@ -160,14 +161,15 @@ $elements = [
     ],
 ];
 $attrsType = 'array<string,string|\Stringable|null|bool|int|float>';
+$phpAttrsType = preg_replace('/<.*>/', '', $attrsType);
 $childType = '\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float';
 
 function generateNormalElement(string $funcName, string $tag): string
 {
-    global $attrsType, $childType;
+    global $attrsType, $phpAttrsType, $childType;
     return <<<EOD
 /** @param $attrsType|$childType \$args - attribute array or children */
-function $funcName(...\$args): HTMLElement
+function $funcName($phpAttrsType|$childType ...\$args): HTMLElement
 {
     return new HTMLElement("$tag", \$args);
 }
@@ -176,10 +178,10 @@ EOD;
 
 function generateSelfClosingElement(string $funcName, string $tag): string
 {
-    global $attrsType;
+    global $attrsType, $phpAttrsType;
     return <<<EOD
 /** @param $attrsType \$attrs */
-function $funcName(array \$attrs = []): SelfClosingHTMLElement
+function $funcName($phpAttrsType \$attrs = []): SelfClosingHTMLElement
 {
     return new SelfClosingHTMLElement("$tag", \$attrs);
 }
