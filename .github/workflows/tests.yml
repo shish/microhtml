@@ -14,11 +14,10 @@ jobs:
     name: Generate Classes
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
-      - name: Set up PHP
-        uses: shivammathur/setup-php@v2
+      - uses: shivammathur/setup-php@v2
         with:
           php-version: 8.4
+      - uses: actions/checkout@v6
       - name: Install dependencies
         run: composer install
       - name: Generate classes.php
@@ -30,15 +29,15 @@ jobs:
     name: Unit Tests (PHP ${{ matrix.php }})
     strategy:
       matrix:
-        php: ["8.2", "8.3", "8.4", "8.5"]
+        php: ["8.4", "8.5"]
     runs-on: ubuntu-24.04
     steps:
       - uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
           coverage: pcov
-      - uses: actions/checkout@v4
-      - uses: actions/cache@v4
+      - uses: actions/checkout@v6
+      - uses: actions/cache@v5
         with:
           path: vendor
           key: vendor-${{ hashFiles('composer.json') }}
@@ -49,8 +48,11 @@ jobs:
     name: Static Analysis
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/cache@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.4
+      - uses: actions/checkout@v6
+      - uses: actions/cache@v5
         with:
           path: vendor
           key: vendor-${{ hashFiles('composer.json') }}
@@ -61,8 +63,11 @@ jobs:
     name: Formatting
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/cache@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.4
+      - uses: actions/checkout@v6
+      - uses: actions/cache@v5
         with:
           path: vendor
           key: vendor-${{ hashFiles('composer.json') }}
