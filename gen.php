@@ -160,7 +160,7 @@ $elements = [
         ],
     ],
 ];
-$attrsType = 'array<string,string|\Stringable|null|bool|int|float>';
+$attrsType = 'array<literal-string,string|\Stringable|null|bool|int|float>';
 $phpAttrsType = preg_replace('/<.*>/', '', $attrsType);
 $childType = '\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float';
 
@@ -194,6 +194,9 @@ function $funcName(
 EOD;
 }
 
+/**
+ * @param array<string, array<string, array<string, ElementType>>> $elements
+ */
 function generateFile(array $elements): string
 {
     $output = "<?php\n\n";

@@ -14,7 +14,7 @@ require_once __DIR__ . '/classes.php';
 # https://developer.mozilla.org/en-US/docs/Web/HTML/Element
 # Main root
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function HTML(
@@ -25,14 +25,14 @@ function HTML(
 }
 
 # Document metadata
-/** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
+/** @param array<literal-string,string|\Stringable|null|bool|int|float> $attrs */
 function BASE(
     array $attrs = [],
 ): SelfClosingHTMLElement {
     return new SelfClosingHTMLElement("base", $attrs);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function HEAD(
@@ -41,20 +41,20 @@ function HEAD(
 ): HTMLElement {
     return new HTMLElement("head", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
+/** @param array<literal-string,string|\Stringable|null|bool|int|float> $attrs */
 function LINK(
     array $attrs = [],
 ): SelfClosingHTMLElement {
     return new SelfClosingHTMLElement("link", $attrs);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
+/** @param array<literal-string,string|\Stringable|null|bool|int|float> $attrs */
 function META(
     array $attrs = [],
 ): SelfClosingHTMLElement {
     return new SelfClosingHTMLElement("meta", $attrs);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function STYLE(
@@ -64,7 +64,7 @@ function STYLE(
     return new HTMLElement("style", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function TITLE(
@@ -76,7 +76,7 @@ function TITLE(
 
 # Sectioning root
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function BODY(
@@ -88,7 +88,7 @@ function BODY(
 
 # Content sectioning
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function ADDRESS(
@@ -98,7 +98,7 @@ function ADDRESS(
     return new HTMLElement("address", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function ARTICLE(
@@ -108,7 +108,7 @@ function ARTICLE(
     return new HTMLElement("article", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function ASIDE(
@@ -118,7 +118,7 @@ function ASIDE(
     return new HTMLElement("aside", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function FOOTER(
@@ -128,7 +128,7 @@ function FOOTER(
     return new HTMLElement("footer", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function HEADER(
@@ -138,7 +138,7 @@ function HEADER(
     return new HTMLElement("header", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function H1(
@@ -148,7 +148,7 @@ function H1(
     return new HTMLElement("h1", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function H2(
@@ -158,7 +158,7 @@ function H2(
     return new HTMLElement("h2", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function H3(
@@ -168,7 +168,7 @@ function H3(
     return new HTMLElement("h3", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function H4(
@@ -178,7 +178,7 @@ function H4(
     return new HTMLElement("h4", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function H5(
@@ -188,7 +188,7 @@ function H5(
     return new HTMLElement("h5", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function H6(
@@ -198,7 +198,7 @@ function H6(
     return new HTMLElement("h6", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function HGROUP(
@@ -208,7 +208,7 @@ function HGROUP(
     return new HTMLElement("hgroup", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function MAIN(
@@ -218,7 +218,7 @@ function MAIN(
     return new HTMLElement("main", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function NAV(
@@ -228,7 +228,7 @@ function NAV(
     return new HTMLElement("nav", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function SECTION(
@@ -240,7 +240,7 @@ function SECTION(
 
 # Text content
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function BLOCKQUOTE(
@@ -250,7 +250,7 @@ function BLOCKQUOTE(
     return new HTMLElement("blockquote", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function DD(
@@ -260,7 +260,7 @@ function DD(
     return new HTMLElement("dd", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function DIR(
@@ -270,7 +270,7 @@ function DIR(
     return new HTMLElement("dir", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function DIV(
@@ -280,7 +280,7 @@ function DIV(
     return new HTMLElement("div", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function DL(
@@ -290,7 +290,7 @@ function DL(
     return new HTMLElement("dl", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function DT(
@@ -300,7 +300,7 @@ function DT(
     return new HTMLElement("dt", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function FIGCAPTION(
@@ -310,7 +310,7 @@ function FIGCAPTION(
     return new HTMLElement("figcaption", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function FIGURE(
@@ -319,14 +319,14 @@ function FIGURE(
 ): HTMLElement {
     return new HTMLElement("figure", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
+/** @param array<literal-string,string|\Stringable|null|bool|int|float> $attrs */
 function HR(
     array $attrs = [],
 ): SelfClosingHTMLElement {
     return new SelfClosingHTMLElement("hr", $attrs);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function LI(
@@ -336,7 +336,7 @@ function LI(
     return new HTMLElement("li", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function OL(
@@ -346,7 +346,7 @@ function OL(
     return new HTMLElement("ol", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function P(
@@ -356,7 +356,7 @@ function P(
     return new HTMLElement("p", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function PRE(
@@ -366,7 +366,7 @@ function PRE(
     return new HTMLElement("pre", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function UL(
@@ -378,7 +378,7 @@ function UL(
 
 # Inline text semantics
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function A(
@@ -388,7 +388,7 @@ function A(
     return new HTMLElement("a", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function ABBR(
@@ -398,7 +398,7 @@ function ABBR(
     return new HTMLElement("abbr", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function B(
@@ -408,7 +408,7 @@ function B(
     return new HTMLElement("b", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function BDI(
@@ -418,7 +418,7 @@ function BDI(
     return new HTMLElement("bdi", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function BDO(
@@ -427,14 +427,14 @@ function BDO(
 ): HTMLElement {
     return new HTMLElement("bdo", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
+/** @param array<literal-string,string|\Stringable|null|bool|int|float> $attrs */
 function BR(
     array $attrs = [],
 ): SelfClosingHTMLElement {
     return new SelfClosingHTMLElement("br", $attrs);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function CITE(
@@ -444,7 +444,7 @@ function CITE(
     return new HTMLElement("cite", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function CODE(
@@ -454,7 +454,7 @@ function CODE(
     return new HTMLElement("code", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function DATA(
@@ -464,7 +464,7 @@ function DATA(
     return new HTMLElement("data", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function DFN(
@@ -474,7 +474,7 @@ function DFN(
     return new HTMLElement("dfn", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function EM(
@@ -484,7 +484,7 @@ function EM(
     return new HTMLElement("em", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function I(
@@ -494,7 +494,7 @@ function I(
     return new HTMLElement("i", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function KBD(
@@ -504,7 +504,7 @@ function KBD(
     return new HTMLElement("kbd", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function MARK(
@@ -514,7 +514,7 @@ function MARK(
     return new HTMLElement("mark", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function Q(
@@ -524,7 +524,7 @@ function Q(
     return new HTMLElement("q", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function RB(
@@ -534,7 +534,7 @@ function RB(
     return new HTMLElement("rb", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function RP(
@@ -544,7 +544,7 @@ function RP(
     return new HTMLElement("rp", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function RT(
@@ -554,7 +554,7 @@ function RT(
     return new HTMLElement("rt", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function RTC(
@@ -564,7 +564,7 @@ function RTC(
     return new HTMLElement("rtc", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function RUBY(
@@ -574,7 +574,7 @@ function RUBY(
     return new HTMLElement("ruby", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function S(
@@ -584,7 +584,7 @@ function S(
     return new HTMLElement("s", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function SAMP(
@@ -594,7 +594,7 @@ function SAMP(
     return new HTMLElement("samp", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function SMALL(
@@ -604,7 +604,7 @@ function SMALL(
     return new HTMLElement("small", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function SPAN(
@@ -614,7 +614,7 @@ function SPAN(
     return new HTMLElement("span", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function STRONG(
@@ -624,7 +624,7 @@ function STRONG(
     return new HTMLElement("strong", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function SUB(
@@ -634,7 +634,7 @@ function SUB(
     return new HTMLElement("sub", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function SUP(
@@ -644,7 +644,7 @@ function SUP(
     return new HTMLElement("sup", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function TIME(
@@ -654,7 +654,7 @@ function TIME(
     return new HTMLElement("time", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function TT(
@@ -664,7 +664,7 @@ function TT(
     return new HTMLElement("tt", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function U(
@@ -674,7 +674,7 @@ function U(
     return new HTMLElement("u", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function VAR_(
@@ -683,7 +683,7 @@ function VAR_(
 ): HTMLElement {
     return new HTMLElement("var", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
+/** @param array<literal-string,string|\Stringable|null|bool|int|float> $attrs */
 function WBR(
     array $attrs = [],
 ): SelfClosingHTMLElement {
@@ -691,14 +691,14 @@ function WBR(
 }
 
 # Image and multimedia
-/** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
+/** @param array<literal-string,string|\Stringable|null|bool|int|float> $attrs */
 function AREA(
     array $attrs = [],
 ): SelfClosingHTMLElement {
     return new SelfClosingHTMLElement("area", $attrs);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function AUDIO(
@@ -707,14 +707,14 @@ function AUDIO(
 ): HTMLElement {
     return new HTMLElement("audio", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
+/** @param array<literal-string,string|\Stringable|null|bool|int|float> $attrs */
 function IMG(
     array $attrs = [],
 ): SelfClosingHTMLElement {
     return new SelfClosingHTMLElement("img", $attrs);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function MAP(
@@ -723,14 +723,14 @@ function MAP(
 ): HTMLElement {
     return new HTMLElement("map", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
+/** @param array<literal-string,string|\Stringable|null|bool|int|float> $attrs */
 function TRACK(
     array $attrs = [],
 ): SelfClosingHTMLElement {
     return new SelfClosingHTMLElement("track", $attrs);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function VIDEO(
@@ -742,7 +742,7 @@ function VIDEO(
 
 # Embedded content
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function APPLET(
@@ -751,14 +751,14 @@ function APPLET(
 ): HTMLElement {
     return new HTMLElement("applet", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
+/** @param array<literal-string,string|\Stringable|null|bool|int|float> $attrs */
 function EMBED(
     array $attrs = [],
 ): SelfClosingHTMLElement {
     return new SelfClosingHTMLElement("embed", $attrs);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function IFRAME(
@@ -768,7 +768,7 @@ function IFRAME(
     return new HTMLElement("iframe", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function NOEMBED(
@@ -778,7 +778,7 @@ function NOEMBED(
     return new HTMLElement("noembed", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function OBJECT(
@@ -787,14 +787,14 @@ function OBJECT(
 ): HTMLElement {
     return new HTMLElement("object", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
+/** @param array<literal-string,string|\Stringable|null|bool|int|float> $attrs */
 function PARAM(
     array $attrs = [],
 ): SelfClosingHTMLElement {
     return new SelfClosingHTMLElement("param", $attrs);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function PICTURE(
@@ -803,7 +803,7 @@ function PICTURE(
 ): HTMLElement {
     return new HTMLElement("picture", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
+/** @param array<literal-string,string|\Stringable|null|bool|int|float> $attrs */
 function SOURCE(
     array $attrs = [],
 ): SelfClosingHTMLElement {
@@ -812,7 +812,7 @@ function SOURCE(
 
 # Scripting
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function CANVAS(
@@ -822,7 +822,7 @@ function CANVAS(
     return new HTMLElement("canvas", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function NOSCRIPT(
@@ -832,7 +832,7 @@ function NOSCRIPT(
     return new HTMLElement("noscript", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function SCRIPT(
@@ -844,7 +844,7 @@ function SCRIPT(
 
 # Demarcating edits
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function DEL(
@@ -854,7 +854,7 @@ function DEL(
     return new HTMLElement("del", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function INS(
@@ -866,7 +866,7 @@ function INS(
 
 # Table content
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function CAPTION(
@@ -875,14 +875,14 @@ function CAPTION(
 ): HTMLElement {
     return new HTMLElement("caption", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
+/** @param array<literal-string,string|\Stringable|null|bool|int|float> $attrs */
 function COL(
     array $attrs = [],
 ): SelfClosingHTMLElement {
     return new SelfClosingHTMLElement("col", $attrs);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function COLGROUP(
@@ -892,7 +892,7 @@ function COLGROUP(
     return new HTMLElement("colgroup", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function TABLE(
@@ -902,7 +902,7 @@ function TABLE(
     return new HTMLElement("table", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function TBODY(
@@ -912,7 +912,7 @@ function TBODY(
     return new HTMLElement("tbody", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function TD(
@@ -922,7 +922,7 @@ function TD(
     return new HTMLElement("td", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function TFOOT(
@@ -932,7 +932,7 @@ function TFOOT(
     return new HTMLElement("tfoot", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function TH(
@@ -942,7 +942,7 @@ function TH(
     return new HTMLElement("th", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function THEAD(
@@ -952,7 +952,7 @@ function THEAD(
     return new HTMLElement("thead", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function TR(
@@ -964,7 +964,7 @@ function TR(
 
 # Forms
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function BUTTON(
@@ -974,7 +974,7 @@ function BUTTON(
     return new HTMLElement("button", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function DATALIST(
@@ -984,7 +984,7 @@ function DATALIST(
     return new HTMLElement("datalist", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function FIELDSET(
@@ -994,7 +994,7 @@ function FIELDSET(
     return new HTMLElement("fieldset", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function FORM(
@@ -1003,14 +1003,14 @@ function FORM(
 ): HTMLElement {
     return new HTMLElement("form", [$arg0, ...$args]);
 }
-/** @param array<string,string|\Stringable|null|bool|int|float> $attrs */
+/** @param array<literal-string,string|\Stringable|null|bool|int|float> $attrs */
 function INPUT(
     array $attrs = [],
 ): SelfClosingHTMLElement {
     return new SelfClosingHTMLElement("input", $attrs);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function LABEL(
@@ -1020,7 +1020,7 @@ function LABEL(
     return new HTMLElement("label", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function LEGEND(
@@ -1030,7 +1030,7 @@ function LEGEND(
     return new HTMLElement("legend", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function METER(
@@ -1040,7 +1040,7 @@ function METER(
     return new HTMLElement("meter", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function OPTGROUP(
@@ -1050,7 +1050,7 @@ function OPTGROUP(
     return new HTMLElement("optgroup", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function OPTION(
@@ -1060,7 +1060,7 @@ function OPTION(
     return new HTMLElement("option", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function OUTPUT(
@@ -1070,7 +1070,7 @@ function OUTPUT(
     return new HTMLElement("output", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function PROGRESS(
@@ -1080,7 +1080,7 @@ function PROGRESS(
     return new HTMLElement("progress", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function SELECT(
@@ -1090,7 +1090,7 @@ function SELECT(
     return new HTMLElement("select", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function TEXTAREA(
@@ -1102,7 +1102,7 @@ function TEXTAREA(
 
 # Interactive elements
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function DETAILS(
@@ -1112,7 +1112,7 @@ function DETAILS(
     return new HTMLElement("details", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function DIALOG(
@@ -1122,7 +1122,7 @@ function DIALOG(
     return new HTMLElement("dialog", [$arg0, ...$args]);
 }
 /**
- * @param array<string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
+ * @param array<literal-string,string|\Stringable|null|bool|int|float>|\MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $arg0 HTML attributes or first child
  * @param \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float $args any further children
  */
 function SUMMARY(

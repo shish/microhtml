@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace MicroHTML;
 
 /**
- * @phpstan-type Attrs array<string,string|\Stringable|null|bool|int|float>
+ * @phpstan-type Attrs array<literal-string,string|\Stringable|null|bool|int|float>
  * @phpstan-type Child \MicroHTML\HTMLElement|string|\Stringable|null|bool|int|float
  * @phpstan-type Arg Attrs|Child
  */
@@ -17,7 +17,10 @@ class HTMLElement
     /** @var array<Child> $children */
     protected array $children;
 
-    /** @param array<Arg> $args */
+    /**
+     * @param literal-string $tag
+     * @param array<Arg> $args
+     */
     public function __construct(string $tag, array $args)
     {
         $this->tag = $tag;
